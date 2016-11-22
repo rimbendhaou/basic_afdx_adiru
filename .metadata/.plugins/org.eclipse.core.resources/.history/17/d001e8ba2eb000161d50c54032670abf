@@ -1,0 +1,40 @@
+package afdx_adiru_model
+public
+
+  WITH AFDX;
+  WITH Hardware;
+  WITH Software;
+  WITH AFDX_Properties;
+  
+  
+
+
+------------------------------------------------------------------
+----------------------- Main Model ADIRU AFDX---------------------
+------------------------------------------------------------------
+
+  SYSTEM afdx_adiru_model
+  END afdx_adiru_model;
+    
+  SYSTEM IMPLEMENTATION afdx_adiru_model.i 
+    SUBCOMPONENTS
+      HW_Platform : SYSTEM Hardware::HW_Platform.i;
+      Software_Layer : SYSTEM Software::Software_Layer.i;
+      -- ARINC-653 Configuration
+      IRS_Partition : VIRTUAL PROCESSOR;
+      ADR_Partition : VIRTUAL PROCESSOR;
+      FMS_ADIRU_Partition : VIRTUAL PROCESSOR;
+   
+      -- AFDX Configuration
+      AFDX_Network : VIRTUAL BUS AFDX_Network.i;
+  	PROPERTIES
+      -- Network speed defined for the whole network here
+      AFDX_Properties::portSpeed => 100 MBytesps;
+      
+      
+  end afdx_adiru_model;   
+    
+    
+
+  
+end afdx_adiru_model;

@@ -1,0 +1,40 @@
+package AFDX
+public
+	WITH AFDX_Properties;
+  
+
+------------------------------------------------------------------
+---  AFDXWire
+------------------------------------------------------------------
+  BUS Wire
+  END Wire;
+
+------------------------------------------------------------------
+---  AFDXSwitch
+------------------------------------------------------------------
+  ABSTRACT Switch
+  END Switch;
+
+------------------------------------------------------------------
+---  AFDX End System
+------------------------------------------------------------------
+  ABSTRACT End_System
+    FEATURES
+      afdx : REQUIRES BUS ACCESS Wire;
+  END End_System;
+
+------------------------------------------------------------------
+---  Virtual Link
+------------------------------------------------------------------  
+  VIRTUAL BUS Virtual_Link
+  END Virtual_Link;
+  
+  VIRTUAL BUS IMPLEMENTATION Virtual_Link.i
+  END Virtual_Link.i;
+
+  VIRTUAL BUS IMPLEMENTATION Virtual_Link.dup
+    SUBCOMPONENTS
+      netA : VIRTUAL BUS Virtual_Link;
+      netB : VIRTUAL BUS Virtual_Link;
+  END Virtual_Link.dup;
+end AFDX;
