@@ -1,0 +1,7 @@
+package dataType
+public
+	data pression
+		properties
+	    Data_Size => 600 Bytes;
+	end pression;
+end dataType;

@@ -1,6 +1,6 @@
 package Software
 Public
-
+with dataType;
 ------------------------------------------------------------------
 -- Dummy model of software layer with a few proccesses
 -- connected via sampling and queueing ports.
@@ -30,8 +30,10 @@ Public
 ------------------------------------------------------------------
   PROCESS P_1
     FEATURES
-      qout1 : OUT EVENT DATA PORT;
-      sout2 : OUT DATA PORT;
+      qout1 : OUT EVENT DATA PORT  ;
+      sout2 : OUT DATA PORT dataType::inertial_altitude;
+      --sin_pression : IN DATA PORT dataType::pression;
+      --qout_pression : OUT EVENT DATA PORT dataType::pression;
   END P_1;
 
 ------------------------------------------------------------------
@@ -41,8 +43,9 @@ Public
     FEATURES
       qin1 : IN EVENT DATA PORT;
       qout1 : OUT EVENT DATA PORT;
-      sin2 : IN DATA PORT;
-      sout3 : OUT DATA PORT;
+      sin2 : IN DATA PORT dataType::inertial_altitude;
+      sout3 : OUT DATA PORT dataType::pressure;
+      
   END P_2;
 
 ------------------------------------------------------------------
@@ -51,16 +54,17 @@ Public
   PROCESS P_3
     FEATURES
       qin1 : IN EVENT DATA PORT;
-      sin2 : IN DATA PORT;
+      sin2 : IN DATA PORT dataType::inertial_altitude;
   END P_3;
 
 ------------------------------------------------------------------
 --- 2.4 Process P_4
 ------------------------------------------------------------------
   PROCESS P_4
-    FEATURES
-      sin2 : IN DATA PORT;
-      sin3 : IN DATA PORT;
+  	FEATURES
+      --sin1 : IN EVENT DATA PORT dataType::pression;
+      sin2 : IN DATA PORT dataType::inertial_altitude;
+      sin3 : IN DATA PORT dataType::pressure;
   END P_4;
 
 END Software;

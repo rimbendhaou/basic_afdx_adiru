@@ -6,6 +6,7 @@ public
   WITH Software;
   WITH AFDX_Properties;
   
+  
   AFDX_Net renames VIRTUAL BUS AFDX::Network;
 
 
@@ -25,7 +26,7 @@ public
       ADIRU_P2 : VIRTUAL PROCESSOR;
       ADIRU_P3 : VIRTUAL PROCESSOR;
       FMS_P1 : VIRTUAL PROCESSOR;
-   
+      
       -- AFDX Configuration
       AFDX_Network : VIRTUAL BUS AFDX_Net.i;
   	PROPERTIES
@@ -118,5 +119,6 @@ public
       AFDX_Properties::Lmax => 512 Bytes applies to VL2,VL3;
       AFDX_Properties::SkewMax => 1 ms applies to VL1,VL2,VL3;
   END AFDX_Net.i;
+  
   
 end Model_ADIRU_AFDX;
