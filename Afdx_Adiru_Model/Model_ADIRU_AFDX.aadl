@@ -5,7 +5,7 @@ public
   WITH Hardware;
   WITH Software;
   WITH AFDX_Properties;
-  
+  WITH Resolute_validate;
   
   AFDX_Net renames VIRTUAL BUS AFDX::Network;
 
@@ -103,7 +103,9 @@ public
             accountingPolicy => frame;
                                      ]) applies to HW_Platform.SW_2;
       
-      
+   annex resolute {**
+	prove (check_arinc653_compliance())
+**};   
   end afdx_adiru_model.i;   
     
     
