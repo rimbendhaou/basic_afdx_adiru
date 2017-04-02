@@ -3,6 +3,7 @@ public
   WITH AFDX;
   WITH AFDX_Properties;
   WITH dataType;
+  with ARINC653;
 
 ------------------------------------------------------------------
 --- 1. HW_Platform
@@ -59,6 +60,7 @@ public
       AFDX_ES_PCI: BUS ACCESS PCI_BUS->AFDX_ES.pci;
       AFDX_EXT: BUS ACCESS AFDX_ES.afdx->afdx;
   END Module.i;
+  
 
 ------------------------------------------------------------------
 --- 1.2 CPU_with_PCI
@@ -66,8 +68,42 @@ public
   PROCESSOR CPU_with_PCI
     FEATURES
       pci : REQUIRES BUS ACCESS;
+    properties
+      Scheduling_Protocol => (POSIX_1003_HIGHEST_PRIORITY_FIRST_PROTOCOL);
+      --ARINC653::Module_Major_Frame => 50ms;
+      
   END CPU_with_PCI;
+  
+  
+------------------------------------------------------------------
+--- 1.2.1 CPU_with_PCI Processor implementation (added for resolute validation)
+------------------------------------------------------------------
+  processor implementation CPU_with_PCI.i
+  subcomponents
+    partition_P1 : virtual processor;
+    partition_P2 : virtual processor;
+    partition_P3 : virtual processor;
+    partition_P4 : virtual processor;
+  properties
+    ARINC653::Module_Major_Frame => 100ms;
 
+    ARINC653::Module_Schedule => (
+    [Partition => reference (partition_P1);
+    Duration  => 25 ms;
+    Periodic_Processing_Start => true;],
+    [Partition => reference (partition_P2);
+    Duration  => 25 ms;
+    Periodic_Processing_Start => true;],
+    [Partition => reference (partition_P3);
+    Duration  => 25 ms;
+    Periodic_Processing_Start => true;],
+    [Partition => reference (partition_P4);
+    Duration  => 25 ms;
+    Periodic_Processing_Start => true;]
+    );
+  end CPU_with_PCI.i;
+  
+  
 ------------------------------------------------------------------
 -- 1.3 AFDX_Card
 ------------------------------------------------------------------

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+Description de la Structure de trame AFDX  en DFDL
+Developed by: Rim BEN DHAOU
+
+
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+           xmlns:fn="http://www.w3.org/2005/xpath-functions"
+           xmlns:afdx="afdx:1.1"
+           targetNamespace="afdx:1.1">
+
+  <xs:annotation>
+    <xs:appinfo source="http://www.ogf.org/dfdl/">
+      <dfdl:defineVariable name="ByteOrder" type="xs:string" />
+
+      <dfdl:defineFormat name="defaults">
+        <dfdl:format alignment="1" alignmentUnits="bits"
+        binaryBooleanFalseRep="0" binaryBooleanTrueRep="1"
+        binaryCalendarEpoch="1970-01-01T00:00:00+00:00" binaryCalendarRep="bcd"
+        binaryDecimalVirtualPoint="0" binaryFloatRep="ieee"
+        binaryNumberCheckPolicy="lax" binaryNumberRep="binary"
+        binaryPackedSignCodes="C D F C" calendarCenturyStart="53"
+        calendarCheckPolicy="lax" calendarDaysInFirstWeek="4"
+        calendarFirstDayOfWeek="Monday" calendarLanguage="en-US"
+        calendarObserveDST="yes" calendarPatternKind="implicit"
+        calendarPattern="yyyy-MM-dd'T'HH:mm:ss" calendarTimeZone="UTC"
+        choiceLengthKind="implicit" decimalSigned="yes"
+        documentFinalTerminatorCanBeMissing="no" emptyValueDelimiterPolicy="none"
+        encoding="UTF-8" encodingErrorPolicy="replace" escapeSchemeRef=""
+        fillByte="0" floating="no" ignoreCase="no" initiatedContent="no"
+        initiator="" leadingSkip="0" lengthKind="implicit" lengthUnits="bits"
+        nilKind="literalValue" nilValueDelimiterPolicy="none" nilValue="NIL"
+        occursCountKind="implicit" outputNewLine="%CR;%LF;"
+        prefixIncludesPrefixLength="no" representation="binary" separator=""
+        separatorPosition="infix" sequenceKind="ordered" terminator=""
+        textBidi="no" textBooleanFalseRep="false" textBooleanJustification="left"
+        textBooleanPadCharacter="%SP;" textBooleanTrueRep="true"
+        textCalendarJustification="left" textCalendarPadCharacter="%SP;"
+        textNumberCheckPolicy="lax" textNumberJustification="right"
+        textNumberPadCharacter="0" textNumberPattern="#0" textNumberRep="standard"
+        textNumberRoundingIncrement="0.0" textNumberRoundingMode="roundUp"
+        textNumberRounding="pattern" textOutputMinLength="0" textPadKind="none"
+        textStandardBase="10" textStandardDecimalSeparator="."
+        textStandardGroupingSeparator="," textStandardInfinityRep="Inf"
+        textStandardNaNRep="NaN" textStandardZeroRep=""
+        textStringJustification="left" textStringPadCharacter="%SP;"
+        textTrimKind="none" textZonedSignStyle="asciiStandard" trailingSkip="0"
+        truncateSpecifiedLengthString="no" useNilForDefault="no" 
+        bitOrder="mostSignificantBitFirst"/>
+      </dfdl:defineFormat>
+
+      <dfdl:format ref="afdx:defaults" byteOrder="bigEndian" />
+
+    </xs:appinfo>
+  </xs:annotation>
+
+  <!-- Simple Types -->
+  <xs:simpleType name="bit" dfdl:lengthKind="explicit" dfdl:byteOrder="bigEndian" dfdl:lengthUnits="bits">
+    <xs:restriction base="xs:unsignedInt" />
+  </xs:simpleType>
+
+  <xs:simpleType name="hexByte" dfdl:lengthKind="explicit" dfdl:byteOrder="bigEndian" dfdl:lengthUnits="bytes">
+    <xs:restriction base="xs:hexBinary" />
+  </xs:simpleType>
+
+  <xs:simpleType name="IPSeg" dfdl:lengthKind="explicit" dfdl:lengthUnits="bytes" dfdl:length="1">
+    <xs:restriction base="xs:unsignedInt"/>
+  </xs:simpleType>
+
+  
+  <!-- TODO MAY BE WE NEED TO DELETE IT Mac Destination Address Group -->
+  <xs:group name='MacDestAddrGrp' >
+    <xs:sequence>
+      <xs:element name='MacDestAddrCstField' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bytes" dfdl:byteOrder="bigEndian" >
+        <xs:annotation>
+          <xs:appinfo source="http://www.ogf.org/dfdl/">
+            <dfdl:assert message="First thirty two bits of MAC destination address must be a constant field" test="{ (xs:string(.) eq '03000000') }" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name='MacDestAddrVirtualLinkId' type="afdx:bit" dfdl:length="16" />
+    </xs:sequence>
+  </xs:group>
+
+  <!-- Mac Source Address Group -->
+  <!--xs:group name='MacSrcAddrGrp' >
+    <xs:sequence>
+      <xs:element name='MacSrcAddrCstField' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="3" dfdl:lengthUnits="bytes" dfdl:byteOrder="bigEndian" >
+        <xs:annotation>
+          <xs:appinfo source="http://www.ogf.org/dfdl/">
+            <dfdl:assert message="First twenty four bits of MAC source address must be a constant field" test="{ (xs:string(.) eq '200') }" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name='MacSrcNetworkId'>
+        <xs:complexType>
+        <xs:sequence>
+          <xs:element name='NetIdCstField' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian">
+            <xs:annotation>
+              <xs:appinfo source="http://www.ogf.org/dfdl/">
+                <dfdl:assert message="First twenty four bits of MAC source address must be a constant field" test="{ (xs:string(.) eq '200') }" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name='NetIdDomainId' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
+        </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name='MacSrcEquipmentId'>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name='SideId' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="3" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
+            <xs:element name='LocationId' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="5" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name='MacSrcInterfaceId' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="3" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
+      <xs:element name='MacSrcEndingCstField' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="5" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian">
+        <xs:annotation>
+          <xs:appinfo source="http://www.ogf.org/dfdl/">
+            <dfdl:assert message="Last five bits of MAC source address must be a constant field" test="{ (xs:string(.) eq '0') }" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+
+    </xs:sequence>
+  </xs:group-->
+  
+  <!-- IP  Groups -->
+  <xs:group name="IPSrcGrp">
+    <xs:sequence>
+      <xs:element name="IPSrcByte1" type="xs:unsignedByte" dfdl:outputValueCalc="{ 
+         xs:unsignedByte(fn:substring-before(../IPSrc, '.'))
+         }"/>
+      <xs:element name="IPSrcByte2" type="xs:unsignedByte" dfdl:outputValueCalc="{
+         xs:unsignedByte(fn:substring-before(fn:substring-after(../IPSrc, '.'), '.'))
+         }"/>
+      <xs:element name="IPSrcByte3" type="xs:unsignedByte" dfdl:outputValueCalc="{
+         xs:unsignedByte(fn:substring-before(fn:substring-after(fn:substring-after(../IPSrc, '.'), '.'), '.'))
+         }"/>
+      <xs:element name="IPSrcByte4" type="xs:unsignedByte" dfdl:outputValueCalc="{
+         xs:unsignedByte(fn:substring-after(fn:substring-after(fn:substring-after(../IPSrc, '.'), '.'), '.'))
+         }"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:group name="IPDestGrp">
+    <xs:sequence>
+      <xs:element name="IPDestByte1" type="xs:unsignedByte" dfdl:outputValueCalc="{ 
+         xs:unsignedByte(fn:substring-before(../IPDest, '.'))
+         }"/>
+      <xs:element name="IPDestByte2" type="xs:unsignedByte" dfdl:outputValueCalc="{
+         xs:unsignedByte(fn:substring-before(fn:substring-after(../IPDest, '.'), '.'))
+         }"/>
+      <xs:element name="IPDestByte3" type="xs:unsignedByte" dfdl:outputValueCalc="{
+         xs:unsignedByte(fn:substring-before(fn:substring-after(fn:substring-after(../IPDest, '.'), '.'), '.'))
+         }"/>
+      <xs:element name="IPDestByte4" type="xs:unsignedByte" dfdl:outputValueCalc="{
+         xs:unsignedByte(fn:substring-after(fn:substring-after(fn:substring-after(../IPDest, '.'), '.'), '.'))
+         }"/>
+    </xs:sequence>
+  </xs:group>
+
+  <!-- TODO MAY BE NEED TO DELETE Label Group -->
+  <xs:group name="LabelGroup" >
+    <xs:sequence>
+        <xs:element name="Label1" type="afdx:bit" dfdl:length="2" />
+        <xs:element name="Label2" type="afdx:bit" dfdl:length="3" />
+        <xs:element name="Label3" type="afdx:bit" dfdl:length="3" />
+    </xs:sequence>
+  </xs:group>
+  
+  <!-- AFDX Frame -->
+  <xs:element name="AFDXFrame">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="afdx:MacHeader" />
+        <xs:element ref="afdx:EthernetPayload" />
+        <xs:element name="FCS" type="afdx:hexByte" dfdl:length="4"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- MacHeader -->
+  <xs:element name="MacHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name='MacDestAddr'>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name='MacDestAddrCstField' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bytes" dfdl:byteOrder="bigEndian" >
+                <xs:annotation>
+                  <xs:appinfo source="http://www.ogf.org/dfdl/">
+                    <dfdl:assert message="First thirty two bits of MAC destination address must be a constant field" test="{ (xs:string(.) eq '03000000') }" />
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name='MacDestAddrVirtualLinkId' type="afdx:bit" dfdl:length="16" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!--xs:element name='MacSrcAddr' type="afdx:hexByte" dfdl:length="6" /-->
+        <xs:element name='MacSrcAddrGrp' >
+          <xs:complexType>
+          <xs:sequence>
+            <xs:element name='MacSrcAddrCstField' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="3" dfdl:lengthUnits="bytes" dfdl:byteOrder="bigEndian" >
+              <!--TODO check this field-->
+              <!--xs:annotation>
+                <xs:appinfo source="http://www.ogf.org/dfdl/">
+                  <dfdl:assert message="First twenty four bits of MAC source address must be a constant field" test="{ (xs:string(.) eq '020000') }" />
+                </xs:appinfo>
+              </xs:annotation-->
+            </xs:element>
+            <xs:element name='MacSrcNetworkId'>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name='NetIdCstField' type="xs:unsignedInt" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian">
+                    <xs:annotation>
+                      <xs:appinfo source="http://www.ogf.org/dfdl/">
+                        <dfdl:assert message="First four bits of NetworkId must be a constant field" test="{ (xs:string(.) eq '0') }" />
+                      </xs:appinfo>
+                    </xs:annotation>
+                  </xs:element>
+                  <xs:element name='NetIdDomainId' type="xs:unsignedInt" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name='MacSrcEquipmentId'>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name='SideId' type="xs:unsignedInt" dfdl:lengthKind="explicit" dfdl:length="3" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
+                  <xs:element name='LocationId' type="xs:unsignedInt" dfdl:lengthKind="explicit" dfdl:length="5" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name='MacSrcInterfaceId' type="xs:unsignedInt" dfdl:lengthKind="explicit" dfdl:length="3" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
+            <xs:element name='MacSrcEndingCstField' type="xs:unsignedInt" dfdl:lengthKind="explicit" dfdl:length="5" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian">
+              <xs:annotation>
+                <xs:appinfo source="http://www.ogf.org/dfdl/">
+                  <dfdl:assert message="Last five bits of MAC source address must be a constant field" test="{ (xs:string(.) eq '0') }" />
+                </xs:appinfo>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name='EthernetType' type="afdx:bit" dfdl:length="16" />
+        <xs:sequence>
+           <xs:annotation>
+             <xs:appinfo source="http://www.ogf.org/dfdl/">
+               <dfdl:assert message="IP version must be IPv4" test="{ (xs:unsignedInt(./EthernetType) eq 2048) }" />
+             </xs:appinfo>
+           </xs:annotation>
+        </xs:sequence>
+        
+    </xs:sequence>
+      
+    </xs:complexType>
+    
+  </xs:element>
+
+  <!-- Ethernet Payload -->
+  <xs:element name="EthernetPayload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="afdx:IPv4Header" />
+        <xs:element ref="afdx:IPv4Payload" />
+        <xs:element name="SeqNumber" type="afdx:hexByte" dfdl:length="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- I think there is no ipv6 in afdx -->
+  <!--xs:element name="EthernetPayload">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="afdx:IPv4" />
+        <xs:element ref="afdx:IPv6" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element-->
+  
+  <!--xs:element name="IPv6">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="afdx:IPv4Header" />
+        <xs:element ref="afdx:IPv4Payload" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element-->
+
+  <!-- IP v4 Header -->
+  <xs:element name='IPv4Header'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Version" type="afdx:bit" dfdl:length="4" />
+        <xs:sequence>
+          <xs:annotation>
+            <xs:appinfo source="http://www.ogf.org/dfdl/">
+              <dfdl:assert message="Version must be 4" test="{ (xs:unsignedInt(./Version) eq 4) }" />
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:sequence>
+        <xs:element name="IHL" type="afdx:bit" dfdl:length="4" />
+        <xs:element name="TypeOfService" type="afdx:bit" dfdl:length="8" />
+        <xs:element name="Length" type="afdx:bit" dfdl:length="16" />
+        <xs:element name="Identification" type="afdx:bit" dfdl:length="16" />
+        <xs:element name="Flags" type="afdx:bit" dfdl:length="3" />
+        <xs:element name="FragmentOffset" type="afdx:bit" dfdl:length="13" />
+        <xs:element name="TTL" type="afdx:bit" dfdl:length="8" />
+        <xs:element name="Protocol" type="afdx:bit" dfdl:length="8" />
+        <xs:element name="Checksum" type="afdx:bit" dfdl:length="16" />
+        <xs:sequence dfdl:hiddenGroupRef="afdx:IPSrcGrp"/>
+        <xs:element name="IPSrc" type="xs:string" dfdl:inputValueCalc="{ fn:concat(../IPSrcByte1, '.', ../IPSrcByte2, '.', ../IPSrcByte3, '.', ../IPSrcByte4) }"/>
+        <xs:sequence dfdl:hiddenGroupRef="afdx:IPDestGrp"/>
+        <xs:element name="IPDest" type="xs:string" dfdl:inputValueCalc="{ fn:concat(../IPDestByte1, '.', ../IPDestByte2, '.', ../IPDestByte3, '.', ../IPDestByte4) }"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- IP Payload -->
+  <xs:element name='IPv4Payload'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="afdx:UDPHeader" />
+        <xs:element ref="afdx:UDPPayload" />
+        
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+ 
+
+  <!-- UDP Header -->
+  <xs:element name='UDPHeader'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SrcPort" type="afdx:bit" dfdl:length="16" />
+        <xs:element name="DestPort" type="afdx:bit" dfdl:length="16" />
+        <xs:element name="UDPLength" type="afdx:bit" dfdl:length="16" />
+        <xs:element name="UDPChecksum" type="afdx:bit" dfdl:length="16" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- UDP Payload or afdx payload size between 18…1472-->
+  <xs:element name='UDPPayload'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="afdx:DataSet" />
+       
+        <!--xs:element ref="afdx:ARINC429Data" /-->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Data Set-->
+  <xs:element name='DataSet'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codage" type="afdx:bit" dfdl:length="8"/>
+        <xs:element ref="afdx:ARINC429Data"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- ARINC429 data-->
+    <xs:element name='ARINC429Data'>
+    <xs:complexType>
+      <xs:sequence>
+        <!--xs:sequence dfdl:hiddenGroupRef="afdx:LabelGroup"/-->
+        <xs:sequence>
+          <xs:element name="Label1" type="afdx:bit" dfdl:length="2" />
+          <xs:element name="Label2" type="afdx:bit" dfdl:length="3" />
+          <xs:element name="Label3" type="afdx:bit" dfdl:length="3" />
+        </xs:sequence>
+        <!--xs:element name="Label" type="xs:string" dfdl:inputValueCalc="{ fn:concat(../Label1, ../Label2, ../Label3) }"/-->
+        <xs:choice>
+          <xs:element ref="afdx:ARINC429DataBCD" />
+          <xs:element ref="afdx:ARINC429DataBNR" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType> 
+  </xs:element>
+
+  <!-- BNR ARINC429 data-->
+  <xs:element name='ARINC429DataBNR'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:appinfo source="http://www.ogf.org/dfdl/">
+            <dfdl:discriminator message="Not BNR data" test="{ xs:unsignedInt(../../codage) eq 0  }" />
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:element name="Bit32" type="afdx:bit" dfdl:length="1" />
+        <xs:element name="SSM" type="afdx:bit" dfdl:length="3"/>
+        <xs:element name="DataField" type="afdx:bit" dfdl:length="18" />
+        <xs:element name="SDI" type="afdx:bit" dfdl:length="2"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- BCD ARINC429 data-->
+  <xs:element name='ARINC429DataBCD'>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:annotation>
+          <xs:appinfo source="http://www.ogf.org/dfdl/">
+            <dfdl:discriminator message="Not BCD data" test="{ xs:unsignedInt(../../codage) eq 1 }" />
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:element name="Bit32" type="afdx:bit" dfdl:length="1" />
+        <xs:element name="SSM" type="afdx:bit" dfdl:length="2"/>
+        <xs:element name="DataField" type="afdx:bit" dfdl:length="19" />
+        <xs:element name="SDI" type="afdx:bit" dfdl:length="2"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  
+
+</xs:schema>
+

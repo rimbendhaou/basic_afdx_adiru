@@ -9,6 +9,134 @@
     </ownedValue>
     <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
   </ownedPropertyAssociation>
+  <componentInstance name="main_mem" category="memory">
+    <componentInstance name="P1_Mem" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Base_Address"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral"/>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Memory_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="102400">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.11/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Memory_Type"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.1/@ownedLiteral.1"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedMemorySubcomponent.0"/>
+      <index>0</index>
+    </componentInstance>
+    <componentInstance name="P2_Mem" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Base_Address"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral"/>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Memory_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="102400">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.11/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Memory_Type"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.1/@ownedLiteral.1"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedMemorySubcomponent.1"/>
+      <index>0</index>
+    </componentInstance>
+    <componentInstance name="P3_Mem" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Base_Address"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral"/>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Memory_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="102400">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.11/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Memory_Type"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.1/@ownedLiteral.1"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedMemorySubcomponent.2"/>
+      <index>0</index>
+    </componentInstance>
+    <componentInstance name="P4_Mem" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Base_Address"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral"/>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Memory_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="102400">
+            <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.11/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Memory_Type"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.1/@ownedLiteral.1"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../adiru_memory.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedMemorySubcomponent.3"/>
+      <index>0</index>
+    </componentInstance>
+    <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedMemorySubcomponent.0"/>
+    <index>0</index>
+  </componentInstance>
   <componentInstance name="HW_Platform" category="system">
     <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
       <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
@@ -19,23 +147,23 @@
       </ownedValue>
       <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
     </ownedPropertyAssociation>
-    <componentInstance name="WIRE_1" srcConnectionInstance="//@componentInstance.0/@connectionInstance.0 //@componentInstance.0/@connectionInstance.1" category="bus">
+    <componentInstance name="WIRE_1" srcConnectionInstance="//@componentInstance.1/@connectionInstance.0 //@componentInstance.1/@connectionInstance.1" category="bus">
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.0"/>
       <index>0</index>
     </componentInstance>
-    <componentInstance name="WIRE_2" srcConnectionInstance="//@componentInstance.0/@connectionInstance.2 //@componentInstance.0/@connectionInstance.3" category="bus">
+    <componentInstance name="WIRE_2" srcConnectionInstance="//@componentInstance.1/@connectionInstance.2 //@componentInstance.1/@connectionInstance.3" category="bus">
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.1"/>
       <index>0</index>
     </componentInstance>
-    <componentInstance name="WIRE_3" srcConnectionInstance="//@componentInstance.0/@connectionInstance.4 //@componentInstance.0/@connectionInstance.5" category="bus">
+    <componentInstance name="WIRE_3" srcConnectionInstance="//@componentInstance.1/@connectionInstance.4 //@componentInstance.1/@connectionInstance.5" category="bus">
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.2"/>
       <index>0</index>
     </componentInstance>
-    <componentInstance name="WIRE_4" srcConnectionInstance="//@componentInstance.0/@connectionInstance.6 //@componentInstance.0/@connectionInstance.7" category="bus">
+    <componentInstance name="WIRE_4" srcConnectionInstance="//@componentInstance.1/@connectionInstance.6 //@componentInstance.1/@connectionInstance.7" category="bus">
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.3"/>
       <index>0</index>
     </componentInstance>
-    <componentInstance name="WIRE_5" srcConnectionInstance="//@componentInstance.0/@connectionInstance.8 //@componentInstance.0/@connectionInstance.9" category="bus">
+    <componentInstance name="WIRE_5" srcConnectionInstance="//@componentInstance.1/@connectionInstance.8 //@componentInstance.1/@connectionInstance.9" category="bus">
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusSubcomponent.4"/>
       <index>0</index>
     </componentInstance>
@@ -56,7 +184,7 @@
             <ownedListElement xsi:type="aadl2:RecordValue">
               <ownedFieldValue>
                 <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.0"/>
-                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.0"/>
+                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.0"/>
               </ownedFieldValue>
               <ownedFieldValue>
                 <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.3"/>
@@ -80,7 +208,7 @@
             <ownedListElement xsi:type="aadl2:RecordValue">
               <ownedFieldValue>
                 <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.0"/>
-                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.1"/>
+                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.1"/>
               </ownedFieldValue>
               <ownedFieldValue>
                 <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.3"/>
@@ -104,7 +232,7 @@
             <ownedListElement xsi:type="aadl2:RecordValue">
               <ownedFieldValue>
                 <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.0"/>
-                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.2"/>
+                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.2"/>
               </ownedFieldValue>
               <ownedFieldValue>
                 <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.3"/>
@@ -127,7 +255,7 @@
             </ownedListElement>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.18"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.22"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.Supported_Port_Speeds"/>
@@ -141,9 +269,9 @@
             </ownedListElement>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
-      <featureInstance name="afdx_p1" dstConnectionInstance="//@componentInstance.0/@connectionInstance.1" category="busAccess" direction="in out">
+      <featureInstance name="afdx_p1" dstConnectionInstance="//@componentInstance.1/@connectionInstance.1" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
           <ownedValue>
@@ -165,11 +293,11 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
       </featureInstance>
-      <featureInstance name="afdx_p2" dstConnectionInstance="//@componentInstance.0/@connectionInstance.9" category="busAccess" direction="in out">
+      <featureInstance name="afdx_p2" dstConnectionInstance="//@componentInstance.1/@connectionInstance.9" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
           <ownedValue>
@@ -191,11 +319,11 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.1"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.1"/>
       </featureInstance>
-      <featureInstance name="afdx_p3" dstConnectionInstance="//@componentInstance.0/@connectionInstance.4" category="busAccess" direction="in out">
+      <featureInstance name="afdx_p3" dstConnectionInstance="//@componentInstance.1/@connectionInstance.4" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
           <ownedValue>
@@ -217,11 +345,11 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.2"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.2"/>
       </featureInstance>
-      <featureInstance name="afdx_p4" dstConnectionInstance="//@componentInstance.0/@connectionInstance.2" category="busAccess" direction="in out">
+      <featureInstance name="afdx_p4" dstConnectionInstance="//@componentInstance.1/@connectionInstance.2" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
           <ownedValue>
@@ -243,9 +371,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.3"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.3"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0"/>
       <index>0</index>
@@ -267,7 +395,7 @@
             <ownedListElement xsi:type="aadl2:RecordValue">
               <ownedFieldValue>
                 <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.0"/>
-                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.1"/>
+                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.1"/>
               </ownedFieldValue>
               <ownedFieldValue>
                 <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.3"/>
@@ -291,7 +419,7 @@
             <ownedListElement xsi:type="aadl2:RecordValue">
               <ownedFieldValue>
                 <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.0"/>
-                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.2"/>
+                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.2"/>
               </ownedFieldValue>
               <ownedFieldValue>
                 <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.3"/>
@@ -314,7 +442,7 @@
             </ownedListElement>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.19"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.23"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.Supported_Port_Speeds"/>
@@ -328,9 +456,9 @@
             </ownedListElement>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
-      <featureInstance name="afdx_p1" dstConnectionInstance="//@componentInstance.0/@connectionInstance.3" category="busAccess" direction="in out">
+      <featureInstance name="afdx_p1" dstConnectionInstance="//@componentInstance.1/@connectionInstance.3" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
           <ownedValue>
@@ -352,9 +480,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
       </featureInstance>
       <featureInstance name="afdx_p2" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -378,9 +506,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.1"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.1"/>
       </featureInstance>
       <featureInstance name="afdx_p3" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -404,11 +532,11 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.2"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.2"/>
       </featureInstance>
-      <featureInstance name="afdx_p4" dstConnectionInstance="//@componentInstance.0/@connectionInstance.6" category="busAccess" direction="in out">
+      <featureInstance name="afdx_p4" dstConnectionInstance="//@componentInstance.1/@connectionInstance.6" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
           <ownedValue>
@@ -430,9 +558,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.3"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.3"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1"/>
       <index>0</index>
@@ -457,9 +585,9 @@
           </ownedValue>
           <propertyAssociation href="../dataType.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:EventDataPort" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedEventDataPort.0"/>
+        <feature xsi:type="aadl2:EventDataPort" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedEventDataPort.0"/>
       </featureInstance>
-      <featureInstance name="afdx" dstConnectionInstance="//@componentInstance.0/@connectionInstance.8" category="busAccess" direction="in out">
+      <featureInstance name="afdx" dstConnectionInstance="//@componentInstance.1/@connectionInstance.8" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
           <ownedValue>
@@ -469,7 +597,7 @@
           </ownedValue>
           <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedBusAccess.0"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.2"/>
       <index>0</index>
@@ -484,7 +612,7 @@
         </ownedValue>
         <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
-      <featureInstance name="afdx" dstConnectionInstance="//@componentInstance.0/@connectionInstance.0" category="busAccess" direction="in out">
+      <featureInstance name="afdx" dstConnectionInstance="//@componentInstance.1/@connectionInstance.0" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
           <ownedValue>
@@ -496,7 +624,7 @@
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
       </featureInstance>
-      <componentInstance name="PCI_BUS" srcConnectionInstance="//@componentInstance.0/@componentInstance.8/@connectionInstance.0 //@componentInstance.0/@componentInstance.8/@connectionInstance.1" category="bus">
+      <componentInstance name="PCI_BUS" srcConnectionInstance="//@componentInstance.1/@componentInstance.8/@connectionInstance.0 //@componentInstance.1/@componentInstance.8/@connectionInstance.1" category="bus">
         <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedBusSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
@@ -519,7 +647,7 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
         <featureInstance name="afdx" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -540,11 +668,11 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
           <feature xsi:type="aadl2:BusAccess" href="../AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
         </featureInstance>
-        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.0/@componentInstance.8/@connectionInstance.1" category="busAccess" direction="in out">
+        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.1/@componentInstance.8/@connectionInstance.1" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
             <ownedValue>
@@ -563,15 +691,26 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDeviceSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
       <componentInstance name="CPU" category="processor">
-        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.0/@componentInstance.8/@connectionInstance.0" category="busAccess" direction="in out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.1/@componentInstance.8/@connectionInstance.0" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
             <ownedValue>
@@ -581,18 +720,18 @@
             </ownedValue>
             <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
-      <connectionInstance name="PCI_BUS -> CPU.pci" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.8/@componentInstance.2/@featureInstance.0" source="//@componentInstance.0/@componentInstance.8/@componentInstance.0">
-        <connectionReference context="//@componentInstance.0/@componentInstance.8" source="//@componentInstance.0/@componentInstance.8/@componentInstance.0" destination="//@componentInstance.0/@componentInstance.8/@componentInstance.2/@featureInstance.0">
+      <connectionInstance name="PCI_BUS -> CPU.pci" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.8/@componentInstance.2/@featureInstance.0" source="//@componentInstance.1/@componentInstance.8/@componentInstance.0">
+        <connectionReference context="//@componentInstance.1/@componentInstance.8" source="//@componentInstance.1/@componentInstance.8/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.8/@componentInstance.2/@featureInstance.0">
           <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.0"/>
         </connectionReference>
       </connectionInstance>
-      <connectionInstance name="PCI_BUS -> AFDX_ES.pci" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.8/@componentInstance.1/@featureInstance.1" source="//@componentInstance.0/@componentInstance.8/@componentInstance.0">
-        <connectionReference context="//@componentInstance.0/@componentInstance.8" source="//@componentInstance.0/@componentInstance.8/@componentInstance.0" destination="//@componentInstance.0/@componentInstance.8/@componentInstance.1/@featureInstance.1">
+      <connectionInstance name="PCI_BUS -> AFDX_ES.pci" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.8/@componentInstance.1/@featureInstance.1" source="//@componentInstance.1/@componentInstance.8/@componentInstance.0">
+        <connectionReference context="//@componentInstance.1/@componentInstance.8" source="//@componentInstance.1/@componentInstance.8/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.8/@componentInstance.1/@featureInstance.1">
           <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.1"/>
         </connectionReference>
       </connectionInstance>
@@ -609,7 +748,7 @@
         </ownedValue>
         <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
-      <featureInstance name="afdx" dstConnectionInstance="//@componentInstance.0/@connectionInstance.5" category="busAccess" direction="in out">
+      <featureInstance name="afdx" dstConnectionInstance="//@componentInstance.1/@connectionInstance.5" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
           <ownedValue>
@@ -621,7 +760,7 @@
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
       </featureInstance>
-      <componentInstance name="PCI_BUS" srcConnectionInstance="//@componentInstance.0/@componentInstance.9/@connectionInstance.0 //@componentInstance.0/@componentInstance.9/@connectionInstance.1" category="bus">
+      <componentInstance name="PCI_BUS" srcConnectionInstance="//@componentInstance.1/@componentInstance.9/@connectionInstance.0 //@componentInstance.1/@componentInstance.9/@connectionInstance.1" category="bus">
         <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedBusSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
@@ -644,7 +783,7 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
         <featureInstance name="afdx" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -665,11 +804,11 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
           <feature xsi:type="aadl2:BusAccess" href="../AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
         </featureInstance>
-        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.0/@componentInstance.9/@connectionInstance.1" category="busAccess" direction="in out">
+        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.1/@componentInstance.9/@connectionInstance.1" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
             <ownedValue>
@@ -688,15 +827,26 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDeviceSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
       <componentInstance name="CPU" category="processor">
-        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.0/@componentInstance.9/@connectionInstance.0" category="busAccess" direction="in out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.1/@componentInstance.9/@connectionInstance.0" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
             <ownedValue>
@@ -706,18 +856,18 @@
             </ownedValue>
             <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
-      <connectionInstance name="PCI_BUS -> CPU.pci" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.9/@componentInstance.2/@featureInstance.0" source="//@componentInstance.0/@componentInstance.9/@componentInstance.0">
-        <connectionReference context="//@componentInstance.0/@componentInstance.9" source="//@componentInstance.0/@componentInstance.9/@componentInstance.0" destination="//@componentInstance.0/@componentInstance.9/@componentInstance.2/@featureInstance.0">
+      <connectionInstance name="PCI_BUS -> CPU.pci" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.9/@componentInstance.2/@featureInstance.0" source="//@componentInstance.1/@componentInstance.9/@componentInstance.0">
+        <connectionReference context="//@componentInstance.1/@componentInstance.9" source="//@componentInstance.1/@componentInstance.9/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.9/@componentInstance.2/@featureInstance.0">
           <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.0"/>
         </connectionReference>
       </connectionInstance>
-      <connectionInstance name="PCI_BUS -> AFDX_ES.pci" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.9/@componentInstance.1/@featureInstance.1" source="//@componentInstance.0/@componentInstance.9/@componentInstance.0">
-        <connectionReference context="//@componentInstance.0/@componentInstance.9" source="//@componentInstance.0/@componentInstance.9/@componentInstance.0" destination="//@componentInstance.0/@componentInstance.9/@componentInstance.1/@featureInstance.1">
+      <connectionInstance name="PCI_BUS -> AFDX_ES.pci" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.9/@componentInstance.1/@featureInstance.1" source="//@componentInstance.1/@componentInstance.9/@componentInstance.0">
+        <connectionReference context="//@componentInstance.1/@componentInstance.9" source="//@componentInstance.1/@componentInstance.9/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.9/@componentInstance.1/@featureInstance.1">
           <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.1"/>
         </connectionReference>
       </connectionInstance>
@@ -734,7 +884,7 @@
         </ownedValue>
         <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
-      <featureInstance name="afdx" dstConnectionInstance="//@componentInstance.0/@connectionInstance.7" category="busAccess" direction="in out">
+      <featureInstance name="afdx" dstConnectionInstance="//@componentInstance.1/@connectionInstance.7" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
           <ownedValue>
@@ -746,7 +896,7 @@
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
       </featureInstance>
-      <componentInstance name="PCI_BUS" srcConnectionInstance="//@componentInstance.0/@componentInstance.10/@connectionInstance.0 //@componentInstance.0/@componentInstance.10/@connectionInstance.1" category="bus">
+      <componentInstance name="PCI_BUS" srcConnectionInstance="//@componentInstance.1/@componentInstance.10/@connectionInstance.0 //@componentInstance.1/@componentInstance.10/@connectionInstance.1" category="bus">
         <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedBusSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
@@ -769,7 +919,7 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
         <featureInstance name="afdx" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -790,11 +940,11 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
           <feature xsi:type="aadl2:BusAccess" href="../AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
         </featureInstance>
-        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.0/@componentInstance.10/@connectionInstance.1" category="busAccess" direction="in out">
+        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.1/@componentInstance.10/@connectionInstance.1" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
             <ownedValue>
@@ -813,15 +963,26 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDeviceSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
       <componentInstance name="CPU" category="processor">
-        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.0/@componentInstance.10/@connectionInstance.0" category="busAccess" direction="in out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:NamedValue">
+                <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <featureInstance name="pci" dstConnectionInstance="//@componentInstance.1/@componentInstance.10/@connectionInstance.0" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
             <ownedValue>
@@ -831,71 +992,71 @@
             </ownedValue>
             <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
-      <connectionInstance name="PCI_BUS -> CPU.pci" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.10/@componentInstance.2/@featureInstance.0" source="//@componentInstance.0/@componentInstance.10/@componentInstance.0">
-        <connectionReference context="//@componentInstance.0/@componentInstance.10" source="//@componentInstance.0/@componentInstance.10/@componentInstance.0" destination="//@componentInstance.0/@componentInstance.10/@componentInstance.2/@featureInstance.0">
+      <connectionInstance name="PCI_BUS -> CPU.pci" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.10/@componentInstance.2/@featureInstance.0" source="//@componentInstance.1/@componentInstance.10/@componentInstance.0">
+        <connectionReference context="//@componentInstance.1/@componentInstance.10" source="//@componentInstance.1/@componentInstance.10/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.10/@componentInstance.2/@featureInstance.0">
           <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.0"/>
         </connectionReference>
       </connectionInstance>
-      <connectionInstance name="PCI_BUS -> AFDX_ES.pci" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.10/@componentInstance.1/@featureInstance.1" source="//@componentInstance.0/@componentInstance.10/@componentInstance.0">
-        <connectionReference context="//@componentInstance.0/@componentInstance.10" source="//@componentInstance.0/@componentInstance.10/@componentInstance.0" destination="//@componentInstance.0/@componentInstance.10/@componentInstance.1/@featureInstance.1">
+      <connectionInstance name="PCI_BUS -> AFDX_ES.pci" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.10/@componentInstance.1/@featureInstance.1" source="//@componentInstance.1/@componentInstance.10/@componentInstance.0">
+        <connectionReference context="//@componentInstance.1/@componentInstance.10" source="//@componentInstance.1/@componentInstance.10/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.10/@componentInstance.1/@featureInstance.1">
           <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.1"/>
         </connectionReference>
       </connectionInstance>
       <subcomponent xsi:type="aadl2:SystemSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSystemSubcomponent.2"/>
       <index>0</index>
     </componentInstance>
-    <connectionInstance name="WIRE_1 -> CPM_1.afdx" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.8/@featureInstance.0" source="//@componentInstance.0/@componentInstance.0">
-      <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.0" destination="//@componentInstance.0/@componentInstance.8/@featureInstance.0">
+    <connectionInstance name="WIRE_1 -> CPM_1.afdx" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.8/@featureInstance.0" source="//@componentInstance.1/@componentInstance.0">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.8/@featureInstance.0">
         <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.0"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="WIRE_1 -> SW_1.afdx_p1" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.5/@featureInstance.0" source="//@componentInstance.0/@componentInstance.0">
-      <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.0" destination="//@componentInstance.0/@componentInstance.5/@featureInstance.0">
+    <connectionInstance name="WIRE_1 -> SW_1.afdx_p1" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.5/@featureInstance.0" source="//@componentInstance.1/@componentInstance.0">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.0" destination="//@componentInstance.1/@componentInstance.5/@featureInstance.0">
         <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.1"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="WIRE_2 -> SW_1.afdx_p4" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.5/@featureInstance.3" source="//@componentInstance.0/@componentInstance.1">
-      <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.1" destination="//@componentInstance.0/@componentInstance.5/@featureInstance.3">
+    <connectionInstance name="WIRE_2 -> SW_1.afdx_p4" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.5/@featureInstance.3" source="//@componentInstance.1/@componentInstance.1">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.1" destination="//@componentInstance.1/@componentInstance.5/@featureInstance.3">
         <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.4"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="WIRE_2 -> SW_2.afdx_p1" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.6/@featureInstance.0" source="//@componentInstance.0/@componentInstance.1">
-      <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.1" destination="//@componentInstance.0/@componentInstance.6/@featureInstance.0">
+    <connectionInstance name="WIRE_2 -> SW_2.afdx_p1" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.6/@featureInstance.0" source="//@componentInstance.1/@componentInstance.1">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.1" destination="//@componentInstance.1/@componentInstance.6/@featureInstance.0">
         <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.5"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="WIRE_3 -> SW_1.afdx_p3" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.5/@featureInstance.2" source="//@componentInstance.0/@componentInstance.2">
-      <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.2" destination="//@componentInstance.0/@componentInstance.5/@featureInstance.2">
+    <connectionInstance name="WIRE_3 -> SW_1.afdx_p3" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.5/@featureInstance.2" source="//@componentInstance.1/@componentInstance.2">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.2" destination="//@componentInstance.1/@componentInstance.5/@featureInstance.2">
         <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.2"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="WIRE_3 -> CPM_2.afdx" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.9/@featureInstance.0" source="//@componentInstance.0/@componentInstance.2">
-      <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.2" destination="//@componentInstance.0/@componentInstance.9/@featureInstance.0">
+    <connectionInstance name="WIRE_3 -> CPM_2.afdx" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.9/@featureInstance.0" source="//@componentInstance.1/@componentInstance.2">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.2" destination="//@componentInstance.1/@componentInstance.9/@featureInstance.0">
         <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.3"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="WIRE_4 -> SW_2.afdx_p4" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.6/@featureInstance.3" source="//@componentInstance.0/@componentInstance.3">
-      <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.3" destination="//@componentInstance.0/@componentInstance.6/@featureInstance.3">
+    <connectionInstance name="WIRE_4 -> SW_2.afdx_p4" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.6/@featureInstance.3" source="//@componentInstance.1/@componentInstance.3">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.3" destination="//@componentInstance.1/@componentInstance.6/@featureInstance.3">
         <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.6"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="WIRE_4 -> CPM_3.afdx" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.10/@featureInstance.0" source="//@componentInstance.0/@componentInstance.3">
-      <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.3" destination="//@componentInstance.0/@componentInstance.10/@featureInstance.0">
+    <connectionInstance name="WIRE_4 -> CPM_3.afdx" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.10/@featureInstance.0" source="//@componentInstance.1/@componentInstance.3">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.3" destination="//@componentInstance.1/@componentInstance.10/@featureInstance.0">
         <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.7"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="WIRE_5 -> sensor_rdc.afdx" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.7/@featureInstance.1" source="//@componentInstance.0/@componentInstance.4">
-      <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.4" destination="//@componentInstance.0/@componentInstance.7/@featureInstance.1">
+    <connectionInstance name="WIRE_5 -> sensor_rdc.afdx" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.7/@featureInstance.1" source="//@componentInstance.1/@componentInstance.4">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.4" destination="//@componentInstance.1/@componentInstance.7/@featureInstance.1">
         <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.8"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="WIRE_5 -> SW_1.afdx_p2" complete="true" kind="accessConnection" destination="//@componentInstance.0/@componentInstance.5/@featureInstance.1" source="//@componentInstance.0/@componentInstance.4">
-      <connectionReference context="//@componentInstance.0" source="//@componentInstance.0/@componentInstance.4" destination="//@componentInstance.0/@componentInstance.5/@featureInstance.1">
+    <connectionInstance name="WIRE_5 -> SW_1.afdx_p2" complete="true" kind="accessConnection" destination="//@componentInstance.1/@componentInstance.5/@featureInstance.1" source="//@componentInstance.1/@componentInstance.4">
+      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.4" destination="//@componentInstance.1/@componentInstance.5/@featureInstance.1">
         <connection xsi:type="aadl2:AccessConnection" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAccessConnection.9"/>
       </connectionReference>
     </connectionInstance>
@@ -917,12 +1078,30 @@
         <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.4"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
-      <featureInstance name="sout2" srcConnectionInstance="//@componentInstance.1/@connectionInstance.0 //@componentInstance.1/@connectionInstance.1 //@componentInstance.1/@connectionInstance.2" direction="out">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.9"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="sout2" srcConnectionInstance="//@componentInstance.2/@connectionInstance.0 //@componentInstance.2/@connectionInstance.1 //@componentInstance.2/@connectionInstance.2" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.9"/>
+        </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
           <ownedValue>
@@ -934,7 +1113,16 @@
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
       </featureInstance>
-      <featureInstance name="qout1" srcConnectionInstance="//@componentInstance.1/@connectionInstance.3" category="eventDataPort" direction="out">
+      <featureInstance name="qout1" srcConnectionInstance="//@componentInstance.2/@connectionInstance.3" category="eventDataPort" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.9"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:EventDataPort" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedEventDataPort.0"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0"/>
@@ -945,12 +1133,30 @@
         <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.4"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.5"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
-      <featureInstance name="sin2" dstConnectionInstance="//@componentInstance.1/@connectionInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.10"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="sin2" dstConnectionInstance="//@componentInstance.2/@connectionInstance.0">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.10"/>
+        </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
           <ownedValue>
@@ -962,7 +1168,16 @@
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.0"/>
       </featureInstance>
-      <featureInstance name="sout3" srcConnectionInstance="//@componentInstance.1/@connectionInstance.4" direction="out">
+      <featureInstance name="sout3" srcConnectionInstance="//@componentInstance.2/@connectionInstance.4" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.10"/>
+        </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
           <ownedValue>
@@ -974,10 +1189,28 @@
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDataPort.1"/>
       </featureInstance>
-      <featureInstance name="qin1" dstConnectionInstance="//@componentInstance.1/@connectionInstance.3" category="eventDataPort">
+      <featureInstance name="qin1" dstConnectionInstance="//@componentInstance.2/@connectionInstance.3" category="eventDataPort">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.10"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:EventDataPort" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedEventDataPort.0"/>
       </featureInstance>
-      <featureInstance name="qout1" srcConnectionInstance="//@componentInstance.1/@connectionInstance.5" category="eventDataPort" direction="out">
+      <featureInstance name="qout1" srcConnectionInstance="//@componentInstance.2/@connectionInstance.5" category="eventDataPort" direction="out">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.10"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:EventDataPort" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedEventDataPort.1"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.1"/>
@@ -988,12 +1221,30 @@
         <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.5"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.6"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
-      <featureInstance name="sin2" dstConnectionInstance="//@componentInstance.1/@connectionInstance.1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.11"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="sin2" dstConnectionInstance="//@componentInstance.2/@connectionInstance.1">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.11"/>
+        </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
           <ownedValue>
@@ -1005,7 +1256,16 @@
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
       </featureInstance>
-      <featureInstance name="qin1" dstConnectionInstance="//@componentInstance.1/@connectionInstance.5" category="eventDataPort">
+      <featureInstance name="qin1" dstConnectionInstance="//@componentInstance.2/@connectionInstance.5" category="eventDataPort">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.2"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.11"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:EventDataPort" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventDataPort.0"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.2"/>
@@ -1016,12 +1276,30 @@
         <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.6"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.7"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
-      <featureInstance name="sin2" dstConnectionInstance="//@componentInstance.1/@connectionInstance.2">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.12"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="sin2" dstConnectionInstance="//@componentInstance.2/@connectionInstance.2">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.12"/>
+        </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
           <ownedValue>
@@ -1033,7 +1311,16 @@
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
       </featureInstance>
-      <featureInstance name="sin3" dstConnectionInstance="//@componentInstance.1/@connectionInstance.4">
+      <featureInstance name="sin3" dstConnectionInstance="//@componentInstance.2/@connectionInstance.4">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.12"/>
+        </ownedPropertyAssociation>
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
           <ownedValue>
@@ -1048,99 +1335,99 @@
       <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.3"/>
       <index>0</index>
     </componentInstance>
-    <connectionInstance name="P_1.sout2 -> P_2.sin2" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.0" source="//@componentInstance.1/@componentInstance.0/@featureInstance.0">
+    <connectionInstance name="P_1.sout2 -> P_2.sin2" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.0" source="//@componentInstance.2/@componentInstance.0/@featureInstance.0">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.8/@componentInstance.0"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.2"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.9/@componentInstance.0"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.13"/>
-      </ownedPropertyAssociation>
-      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.0">
-        <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
-      </connectionReference>
-    </connectionInstance>
-    <connectionInstance name="P_1.sout2 -> P_3.sin2" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.2/@featureInstance.0" source="//@componentInstance.1/@componentInstance.0/@featureInstance.0">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.8/@componentInstance.0"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.2"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.10/@componentInstance.0"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.15"/>
-      </ownedPropertyAssociation>
-      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.2/@featureInstance.0">
-        <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
-      </connectionReference>
-    </connectionInstance>
-    <connectionInstance name="P_1.sout2 -> P_4.sin2" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.3/@featureInstance.0" source="//@componentInstance.1/@componentInstance.0/@featureInstance.0">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.8/@componentInstance.0"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.2"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.10/@componentInstance.0"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.16"/>
-      </ownedPropertyAssociation>
-      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.1/@componentInstance.3/@featureInstance.0">
-        <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.4"/>
-      </connectionReference>
-    </connectionInstance>
-    <connectionInstance name="P_1.qout1 -> P_2.qin1" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.2" source="//@componentInstance.1/@componentInstance.0/@featureInstance.1">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.8/@componentInstance.0"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.0"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.9/@componentInstance.0"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.12"/>
-      </ownedPropertyAssociation>
-      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.0/@featureInstance.1" destination="//@componentInstance.1/@componentInstance.1/@featureInstance.2">
-        <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
-      </connectionReference>
-    </connectionInstance>
-    <connectionInstance name="P_2.sout3 -> P_4.sin3" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.3/@featureInstance.1" source="//@componentInstance.1/@componentInstance.1/@featureInstance.1">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.9/@componentInstance.0"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.1"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.10/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.2"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.0"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.17"/>
       </ownedPropertyAssociation>
-      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.1/@componentInstance.3/@featureInstance.1">
-        <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.5"/>
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.1"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="P_2.qout1 -> P_3.qin1" complete="true" kind="portConnection" destination="//@componentInstance.1/@componentInstance.2/@featureInstance.1" source="//@componentInstance.1/@componentInstance.1/@featureInstance.3">
+    <connectionInstance name="P_1.sout2 -> P_3.sin2" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.2/@featureInstance.0" source="//@componentInstance.2/@componentInstance.0/@featureInstance.0">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.8/@componentInstance.0"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.1"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.9/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.2"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.10/@componentInstance.0"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.14"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.19"/>
       </ownedPropertyAssociation>
-      <connectionReference context="//@componentInstance.1" source="//@componentInstance.1/@componentInstance.1/@featureInstance.3" destination="//@componentInstance.1/@componentInstance.2/@featureInstance.1">
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.2/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="P_1.sout2 -> P_4.sin2" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.3/@featureInstance.0" source="//@componentInstance.2/@componentInstance.0/@featureInstance.0">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.2"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.10/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.20"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.0/@featureInstance.0" destination="//@componentInstance.2/@componentInstance.3/@featureInstance.0">
+        <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.4"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="P_1.qout1 -> P_2.qin1" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.2" source="//@componentInstance.2/@componentInstance.0/@featureInstance.1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.16"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.0/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.1/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.0"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="P_2.sout3 -> P_4.sin3" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.3/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@featureInstance.1">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.10/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.21"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@featureInstance.1" destination="//@componentInstance.2/@componentInstance.3/@featureInstance.1">
+        <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.5"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="P_2.qout1 -> P_3.qin1" complete="true" kind="portConnection" destination="//@componentInstance.2/@componentInstance.2/@featureInstance.1" source="//@componentInstance.2/@componentInstance.1/@featureInstance.3">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.18"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="//@componentInstance.2" source="//@componentInstance.2/@componentInstance.1/@featureInstance.3" destination="//@componentInstance.2/@componentInstance.2/@featureInstance.1">
         <connection xsi:type="aadl2:PortConnection" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPortConnection.2"/>
       </connectionReference>
     </connectionInstance>
@@ -1153,14 +1440,14 @@
         <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.8/@componentInstance.1"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.0"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.5"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.2"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.9/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.5"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.2"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.9"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.13"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.BAG"/>
@@ -1197,16 +1484,16 @@
         <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.9/@componentInstance.1"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.2"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.5"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.1"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.6"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.3"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.10/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.2"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.5"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.6"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.3"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.10/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.10"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.14"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.BAG"/>
@@ -1243,18 +1530,18 @@
         <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.8/@componentInstance.1"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.0"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.5"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.1"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.6"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.2"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.9/@componentInstance.1"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.3"/>
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.10/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.0"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.5"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.6"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.2"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.1"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.3"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.10/@componentInstance.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.11"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.15"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.BAG"/>
@@ -1294,7 +1581,7 @@
       <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
       <ownedValue>
         <ownedValue xsi:type="aadl2:ListValue">
-          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.8/@componentInstance.2"/>
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.2"/>
         </ownedValue>
       </ownedValue>
       <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.5"/>
@@ -1307,7 +1594,7 @@
       <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
       <ownedValue>
         <ownedValue xsi:type="aadl2:ListValue">
-          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.8/@componentInstance.2"/>
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.2"/>
         </ownedValue>
       </ownedValue>
       <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.6"/>
@@ -1320,7 +1607,7 @@
       <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
       <ownedValue>
         <ownedValue xsi:type="aadl2:ListValue">
-          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.9/@componentInstance.2"/>
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.2"/>
         </ownedValue>
       </ownedValue>
       <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.7"/>
@@ -1333,7 +1620,7 @@
       <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
       <ownedValue>
         <ownedValue xsi:type="aadl2:ListValue">
-          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.0/@componentInstance.10/@componentInstance.2"/>
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.10/@componentInstance.2"/>
         </ownedValue>
       </ownedValue>
       <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.8"/>

@@ -6,6 +6,7 @@ public
   WITH Software;
   WITH AFDX_Properties;
   WITH Resolute_validate;
+  with adiru_memory;
   
   AFDX_Net renames VIRTUAL BUS AFDX::Network;
 
@@ -18,7 +19,8 @@ public
   END afdx_adiru_model;
     
   SYSTEM IMPLEMENTATION afdx_adiru_model.i 
-    SUBCOMPONENTS
+  	SUBCOMPONENTS
+  	  main_mem  : memory adiru_memory::main_memory.impl;	
       HW_Platform : SYSTEM Hardware::HW_Platform.i;
       Software_Layer : SYSTEM Software::Software_Layer.i;
       -- ARINC-653 Configuration
@@ -42,6 +44,12 @@ public
       Actual_Processor_Binding => (reference(HW_Platform.CPM_1.CPU)) applies to ADIRU_P2;
       Actual_Processor_Binding => (reference(HW_Platform.CPM_2.CPU)) applies to ADIRU_P3;
       Actual_Processor_Binding => (reference(HW_Platform.CPM_3.CPU)) applies to FMS_P1;
+      
+      --  Bind partition process to their address spaces  (memory components)
+      Actual_Memory_Binding => (reference (main_mem.P1_Mem)) applies to Software_Layer.P_1;
+      Actual_Memory_Binding => (reference (main_mem.P2_Mem)) applies to Software_Layer.P_2;
+      Actual_Memory_Binding => (reference (main_mem.P3_Mem)) applies to Software_Layer.P_3;
+      Actual_Memory_Binding => (reference (main_mem.P4_Mem)) applies to Software_Layer.P_4;
       
       -- Define virtual link configuration
       Actual_Connection_Binding =>(reference(HW_Platform.CPM_1.AFDX_ES),reference(HW_Platform.WIRE_1),reference(HW_Platform.SW_1),
