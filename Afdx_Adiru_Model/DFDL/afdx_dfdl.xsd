@@ -71,65 +71,6 @@ Developed by: Rim BEN DHAOU
   <xs:simpleType name="IPSeg" dfdl:lengthKind="explicit" dfdl:lengthUnits="bytes" dfdl:length="1">
     <xs:restriction base="xs:unsignedInt"/>
   </xs:simpleType>
-
-  
-  <!-- TODO MAY BE WE NEED TO DELETE IT Mac Destination Address Group -->
-  <xs:group name='MacDestAddrGrp' >
-    <xs:sequence>
-      <xs:element name='MacDestAddrCstField' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bytes" dfdl:byteOrder="bigEndian" >
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:assert message="First thirty two bits of MAC destination address must be a constant field" test="{ (xs:string(.) eq '03000000') }" />
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name='MacDestAddrVirtualLinkId' type="afdx:bit" dfdl:length="16" />
-    </xs:sequence>
-  </xs:group>
-
-  <!-- Mac Source Address Group -->
-  <!--xs:group name='MacSrcAddrGrp' >
-    <xs:sequence>
-      <xs:element name='MacSrcAddrCstField' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="3" dfdl:lengthUnits="bytes" dfdl:byteOrder="bigEndian" >
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:assert message="First twenty four bits of MAC source address must be a constant field" test="{ (xs:string(.) eq '200') }" />
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name='MacSrcNetworkId'>
-        <xs:complexType>
-        <xs:sequence>
-          <xs:element name='NetIdCstField' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian">
-            <xs:annotation>
-              <xs:appinfo source="http://www.ogf.org/dfdl/">
-                <dfdl:assert message="First twenty four bits of MAC source address must be a constant field" test="{ (xs:string(.) eq '200') }" />
-              </xs:appinfo>
-            </xs:annotation>
-          </xs:element>
-          <xs:element name='NetIdDomainId' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="4" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
-        </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name='MacSrcEquipmentId'>
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name='SideId' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="3" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
-            <xs:element name='LocationId' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="5" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name='MacSrcInterfaceId' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="3" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian"/>
-      <xs:element name='MacSrcEndingCstField' type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="5" dfdl:lengthUnits="bits" dfdl:byteOrder="bigEndian">
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:assert message="Last five bits of MAC source address must be a constant field" test="{ (xs:string(.) eq '0') }" />
-          </xs:appinfo>
-        </xs:annotation>
-      </xs:element>
-
-    </xs:sequence>
-  </xs:group-->
   
   <!-- IP  Groups -->
   <xs:group name="IPSrcGrp">
@@ -258,12 +199,9 @@ Developed by: Rim BEN DHAOU
                <dfdl:assert message="IP version must be IPv4" test="{ (xs:unsignedInt(./EthernetType) eq 2048) }" />
              </xs:appinfo>
            </xs:annotation>
-        </xs:sequence>
-        
+        </xs:sequence>     
     </xs:sequence>
-      
-    </xs:complexType>
-    
+    </xs:complexType> 
   </xs:element>
 
   <!-- Ethernet Payload -->
@@ -276,25 +214,6 @@ Developed by: Rim BEN DHAOU
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
-  <!-- I think there is no ipv6 in afdx -->
-  <!--xs:element name="EthernetPayload">
-    <xs:complexType>
-      <xs:choice>
-        <xs:element ref="afdx:IPv4" />
-        <xs:element ref="afdx:IPv6" />
-      </xs:choice>
-    </xs:complexType>
-  </xs:element-->
-  
-  <!--xs:element name="IPv6">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="afdx:IPv4Header" />
-        <xs:element ref="afdx:IPv4Payload" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element-->
 
   <!-- IP v4 Header -->
   <xs:element name='IPv4Header'>
@@ -331,12 +250,9 @@ Developed by: Rim BEN DHAOU
       <xs:sequence>
         <xs:element ref="afdx:UDPHeader" />
         <xs:element ref="afdx:UDPPayload" />
-        
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
- 
 
   <!-- UDP Header -->
   <xs:element name='UDPHeader'>
@@ -350,13 +266,12 @@ Developed by: Rim BEN DHAOU
     </xs:complexType>
   </xs:element>
 
-  <!-- UDP Payload or afdx payload size between 18…1472-->
+  <!-- UDP Payload or afdx payload size between 18â€¦1472-->
   <xs:element name='UDPPayload'>
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="afdx:DataSet" />
-       
-        <!--xs:element ref="afdx:ARINC429Data" /-->
+        
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -365,7 +280,19 @@ Developed by: Rim BEN DHAOU
   <xs:element name='DataSet'>
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="codage" type="afdx:bit" dfdl:length="8"/>
+        <!-- codage BNR or BCD-->
+        <xs:element name="codage" type="afdx:bit" dfdl:length="8">
+            <xs:annotation>
+              <xs:appinfo source="http://www.ogf.org/dfdl/">
+                <dfdl:assert message="Codage nust be BCD or BNR."
+                             test="{ (xs:unsignedInt(.) eq 0) or (xs:unsignedInt(.) eq 1) }" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+        <!-- nb bits-->
+        <xs:element name="NbBits" type="afdx:bit" dfdl:length="8"/>
+        <xs:element name="Range" type="afdx:hexByte" dfdl:length="4"/>
+        <!-- Resolution-->
         <xs:element ref="afdx:ARINC429Data"/>
       </xs:sequence>
     </xs:complexType>
@@ -397,6 +324,7 @@ Developed by: Rim BEN DHAOU
         <xs:annotation>
           <xs:appinfo source="http://www.ogf.org/dfdl/">
             <dfdl:discriminator message="Not BNR data" test="{ xs:unsignedInt(../../codage) eq 0  }" />
+            
           </xs:appinfo>
         </xs:annotation>
         <xs:element name="Bit32" type="afdx:bit" dfdl:length="1" />
@@ -414,6 +342,7 @@ Developed by: Rim BEN DHAOU
         <xs:annotation>
           <xs:appinfo source="http://www.ogf.org/dfdl/">
             <dfdl:discriminator message="Not BCD data" test="{ xs:unsignedInt(../../codage) eq 1 }" />
+          
           </xs:appinfo>
         </xs:annotation>
         <xs:element name="Bit32" type="afdx:bit" dfdl:length="1" />
