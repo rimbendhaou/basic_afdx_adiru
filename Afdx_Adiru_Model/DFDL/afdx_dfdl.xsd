@@ -266,7 +266,7 @@ Developed by: Rim BEN DHAOU
     </xs:complexType>
   </xs:element>
 
-  <!-- UDP Payload or afdx payload size between 18â€¦1472-->
+  <!-- UDP Payload or afdx payload size between 18…1472-->
   <xs:element name='UDPPayload'>
     <xs:complexType>
       <xs:sequence>
@@ -291,7 +291,18 @@ Developed by: Rim BEN DHAOU
           </xs:element>
         <!-- nb bits-->
         <xs:element name="NbBits" type="afdx:bit" dfdl:length="8"/>
-        <xs:element name="Range" type="afdx:hexByte" dfdl:length="4"/>
+        <xs:element name="Resolution_sign" type="afdx:bit" dfdl:length="8">
+          <xs:annotation>
+            <xs:appinfo source="http://www.ogf.org/dfdl/">
+              <dfdl:assert message="Resolution sign must be 0:plus or 1:minus or 2:plus or minus."
+                           test="{ (xs:unsignedInt(.) eq 0) or (xs:unsignedInt(.) eq 1) or (xs:unsignedInt(.) eq 2) }" />
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ResolutionMajor" type="afdx:bit" dfdl:length="32"/>
+        <xs:element name="ResolutionMinor" type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="6" dfdl:lengthUnits="bytes" dfdl:byteOrder="bigEndian"/>
+        
+        
         <!-- Resolution-->
         <xs:element ref="afdx:ARINC429Data"/>
       </xs:sequence>

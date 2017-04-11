@@ -28,10 +28,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
           <xsl:for-each select="afdx:AFDXFrame/afdx:MacHeader/MacDestAddr">
             <tr>
               <td>
-                <xsl:value-of select="MacDestAdrCstField"/>
+                <xsl:value-of select="MacDestAddrCstField"/>
               </td>
               <td>
-                <xsl:value-of select="MacDestAdrVirtualLinkId"/>
+                <xsl:value-of select="MacDestAddrVirtualLinkId"/>
               </td>
             </tr>
           </xsl:for-each>
@@ -165,6 +165,53 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
           </tr>
         </table>
         <h2>UDP Payload</h2>
+        <h3>ARINC 429 Parameters</h3>
+        <table border="1">
+          <tr bgcolor="#9acd32">
+            <th rowspan="2">Codage</th>
+            <th rowspan="2">Nb Bits</th>
+            <th colspan="2">Resolution</th>
+          </tr>
+          <tr bgcolor="#9acd32">
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>
+              <!--xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/codage"/-->
+              <xsl:variable name="CodageValue" select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/codage"/>
+              <xsl:choose>
+                <xsl:when test="$CodageValue = 0">
+                  BNR
+                </xsl:when>
+                <xsl:otherwise>
+                  BCD
+                </xsl:otherwise>
+              </xsl:choose>
+            </td>
+            <td>
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/NbBits"/>
+            </td>
+            <td>
+              <!--xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/Resolution_sign"/-->
+              <xsl:variable name="signValue" select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/Resolution_sign"/>
+              <xsl:choose>
+                <xsl:when test="$signValue = 0">
+                  +
+                </xsl:when>
+                <xsl:when test="$signValue = 1">
+                  -
+                </xsl:when>
+                <xsl:otherwise>
+                  +/-
+                </xsl:otherwise>
+              </xsl:choose>
+            </td>
+            <td>
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/ResolutionMajor"/>.<xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/ResolutionMinor"/>
+            </td>
+          </tr>
+        </table>
         <h3>ARINC 429 DATA</h3>
         <table border="1">
           <tr bgcolor="#9acd32">
@@ -177,19 +224,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 
           <tr>
             <td>
-              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/Label"/>
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/Label1"/>
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/Label2"/>
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/Label3"/>
             </td>
             <td>
-              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/afdx:ARINC429DataBCD/Bit32"/>
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/afdx:ARINC429DataBNR/Bit32"/>
             </td>
             <td>
-              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/afdx:ARINC429DataBCD/SSM"/>
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/afdx:ARINC429DataBNR/SSM"/>
             </td>
             <td>
-              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/afdx:ARINC429DataBCD/DataField"/>
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/afdx:ARINC429DataBNR/DataField"/>
             </td>
             <td>
-              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/afdx:ARINC429DataBCD/SDI"/>
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/afdx:ARINC429Data/afdx:ARINC429DataBNR/SDI"/>
             </td>
           </tr>
         </table>
