@@ -269,7 +269,7 @@
             </ownedListElement>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <featureInstance name="afdx_p1" dstConnectionInstance="//@componentInstance.1/@connectionInstance.1" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -293,9 +293,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
       </featureInstance>
       <featureInstance name="afdx_p2" dstConnectionInstance="//@componentInstance.1/@connectionInstance.9" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -319,9 +319,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.1"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.1"/>
       </featureInstance>
       <featureInstance name="afdx_p3" dstConnectionInstance="//@componentInstance.1/@connectionInstance.4" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -345,9 +345,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.2"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.2"/>
       </featureInstance>
       <featureInstance name="afdx_p4" dstConnectionInstance="//@componentInstance.1/@connectionInstance.2" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -371,9 +371,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.3"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.3"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.0"/>
       <index>0</index>
@@ -456,7 +456,7 @@
             </ownedListElement>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <featureInstance name="afdx_p1" dstConnectionInstance="//@componentInstance.1/@connectionInstance.3" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -480,9 +480,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
       </featureInstance>
       <featureInstance name="afdx_p2" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -506,9 +506,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.1"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.1"/>
       </featureInstance>
       <featureInstance name="afdx_p3" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -532,9 +532,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.2"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.2"/>
       </featureInstance>
       <featureInstance name="afdx_p4" dstConnectionInstance="//@componentInstance.1/@connectionInstance.6" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -558,9 +558,9 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.3"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.3"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.1"/>
       <index>0</index>
@@ -585,7 +585,7 @@
           </ownedValue>
           <propertyAssociation href="../dataType.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:EventDataPort" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedEventDataPort.0"/>
+        <feature xsi:type="aadl2:EventDataPort" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedEventDataPort.0"/>
       </featureInstance>
       <featureInstance name="afdx" dstConnectionInstance="//@componentInstance.1/@connectionInstance.8" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -597,7 +597,7 @@
           </ownedValue>
           <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedBusAccess.0"/>
+        <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
       </featureInstance>
       <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedDeviceSubcomponent.2"/>
       <index>0</index>
@@ -647,7 +647,7 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
         <featureInstance name="afdx" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -668,7 +668,7 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
           <feature xsi:type="aadl2:BusAccess" href="../AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
         </featureInstance>
@@ -691,9 +691,9 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDeviceSubcomponent.0"/>
         <index>0</index>
@@ -708,7 +708,7 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
         <featureInstance name="pci" dstConnectionInstance="//@componentInstance.1/@componentInstance.8/@connectionInstance.0" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -720,7 +720,7 @@
             </ownedValue>
             <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
         <index>0</index>
@@ -783,7 +783,7 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
         <featureInstance name="afdx" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -804,7 +804,7 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
           <feature xsi:type="aadl2:BusAccess" href="../AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
         </featureInstance>
@@ -827,9 +827,9 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDeviceSubcomponent.0"/>
         <index>0</index>
@@ -844,7 +844,7 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
         <featureInstance name="pci" dstConnectionInstance="//@componentInstance.1/@componentInstance.9/@connectionInstance.0" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -856,7 +856,7 @@
             </ownedValue>
             <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
         <index>0</index>
@@ -919,7 +919,7 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
         <featureInstance name="afdx" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -940,7 +940,7 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
           <feature xsi:type="aadl2:BusAccess" href="../AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
         </featureInstance>
@@ -963,9 +963,9 @@
                 </ownedListElement>
               </ownedValue>
             </ownedValue>
-            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedDeviceSubcomponent.0"/>
         <index>0</index>
@@ -980,7 +980,7 @@
               </ownedListElement>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
         <featureInstance name="pci" dstConnectionInstance="//@componentInstance.1/@componentInstance.10/@connectionInstance.0" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -992,7 +992,7 @@
             </ownedValue>
             <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
           </ownedPropertyAssociation>
-          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
+          <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
         </featureInstance>
         <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
         <index>0</index>
