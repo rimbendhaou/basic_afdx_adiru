@@ -5,7 +5,6 @@
 Description de la Structure de trame AFDX  en DFDL
 Developed by: Rim BEN DHAOU
 
-
 -->
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -55,10 +54,13 @@ Developed by: Rim BEN DHAOU
       </dfdl:defineFormat>
 
       <dfdl:format ref="afdx:defaults" byteOrder="bigEndian" />
-
+      <!-- variable definitions -->
+      <dfdl:defineVariable name="CodageARINC429" type="xs:string"/>
+      <dfdl:defineVariable name="NombreBits" type="xs:string"/>
+      
     </xs:appinfo>
   </xs:annotation>
-
+  
   <!-- Simple Types -->
   <xs:simpleType name="bit" dfdl:lengthKind="explicit" dfdl:byteOrder="bigEndian" dfdl:lengthUnits="bits">
     <xs:restriction base="xs:unsignedInt" />
@@ -270,8 +272,13 @@ Developed by: Rim BEN DHAOU
   <xs:element name='UDPPayload'>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="afdx:DataSet" />
-        
+        <xs:element ref="afdx:DataSet" >
+          <xs:annotation>
+            <xs:appinfo source="http://www.ogf.org/dfdl/">
+              <dfdl:setVariable ref="afdx:CodageARINC429"  value="BCD"/>
+            </xs:appinfo>
+          </xs:annotation>
+          </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -284,7 +291,7 @@ Developed by: Rim BEN DHAOU
         <xs:element name="codage" type="afdx:bit" dfdl:length="8">
             <xs:annotation>
               <xs:appinfo source="http://www.ogf.org/dfdl/">
-                <dfdl:assert message="Codage nust be BCD or BNR."
+                <dfdl:assert message="Codage must be BCD or BNR."
                              test="{ (xs:unsignedInt(.) eq 0) or (xs:unsignedInt(.) eq 1) }" />
               </xs:appinfo>
             </xs:annotation>
@@ -334,7 +341,8 @@ Developed by: Rim BEN DHAOU
       <xs:sequence>
         <xs:annotation>
           <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:discriminator message="Not BNR data" test="{ xs:unsignedInt(../../codage) eq 0  }" />
+            
+            <dfdl:discriminator message="Not BNR data" test="{ $afdx:CodageARINC429 eq 'BNR'  }" />
             
           </xs:appinfo>
         </xs:annotation>
@@ -352,8 +360,9 @@ Developed by: Rim BEN DHAOU
       <xs:sequence>
         <xs:annotation>
           <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <dfdl:discriminator message="Not BCD data" test="{ xs:unsignedInt(../../codage) eq 1 }" />
-          
+            
+            <!--dfdl:discriminator message="Not BCD data" test="{ xs:unsignedInt(../../codage) eq 1 }" /-->
+            <dfdl:discriminator message="Not BCD data" test="{ $afdx:CodageARINC429 eq 'BCD' }" />
           </xs:appinfo>
         </xs:annotation>
         <xs:element name="Bit32" type="afdx:bit" dfdl:length="1" />
