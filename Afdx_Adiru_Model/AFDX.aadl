@@ -1,5 +1,6 @@
 package AFDX
 public
+	with ID_Properties;
 
 ------------------------------------------------------------------
 ---  AFDXWire
@@ -25,6 +26,9 @@ public
 ---  AFDX NETWORK
 ------------------------------------------------------------------  
   VIRTUAL BUS Network
+    PROPERTIES
+    -- Modification for resolute validation	
+  	  ID_Properties::busType => Network;
   END Network;
 
   VIRTUAL BUS IMPLEMENTATION Network.i

@@ -2795,7 +2795,7 @@
           <namedValue xsi:type="aadl2:EnumerationLiteral" href="../ID_Properties.aadl#/0/@ownedProperty.1/@ownedPropertyType/@ownedLiteral.0"/>
         </ownedValue>
       </ownedValue>
-      <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      <propertyAssociation href="../AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
     </ownedPropertyAssociation>
     <componentInstance name="VL1" category="virtual bus">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -2818,7 +2818,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.Lmax"/>
@@ -2827,7 +2827,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.11/@ownedLiteral.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.2"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.SkewMax"/>
@@ -2836,7 +2836,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.4"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:VirtualBusSubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedVirtualBusSubcomponent.0"/>
       <index>0</index>
@@ -2864,7 +2864,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.Lmax"/>
@@ -2873,7 +2873,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.11/@ownedLiteral.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.SkewMax"/>
@@ -2882,7 +2882,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.4"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:VirtualBusSubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedVirtualBusSubcomponent.1"/>
       <index>0</index>
@@ -2912,7 +2912,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.Lmax"/>
@@ -2921,7 +2921,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.11/@ownedLiteral.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.SkewMax"/>
@@ -2930,7 +2930,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.4"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:VirtualBusSubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedVirtualBusSubcomponent.2"/>
       <index>0</index>

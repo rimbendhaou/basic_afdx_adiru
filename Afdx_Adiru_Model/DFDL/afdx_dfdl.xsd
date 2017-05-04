@@ -11,7 +11,7 @@ Developed by: Rim BEN DHAOU
            xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
            xmlns:fn="http://www.w3.org/2005/xpath-functions"
            xmlns:afdx="afdx:1.1"
-           targetNamespace="afdx:1.1">
+           targetNamespace="afdx:1.1" >
 
   <xs:annotation>
     <xs:appinfo source="http://www.ogf.org/dfdl/">
@@ -56,7 +56,8 @@ Developed by: Rim BEN DHAOU
       <dfdl:format ref="afdx:defaults" byteOrder="bigEndian" />
       <!-- variable definitions -->
       <dfdl:defineVariable name="CodageARINC429" type="xs:string"/>
-      <dfdl:defineVariable name="NombreBits" type="xs:string"/>
+      <dfdl:defineVariable name="NbOfBits" type="xs:string"/>
+      <dfdl:defineVariable name="Resolution" type="xs:string"/>
       
     </xs:appinfo>
   </xs:annotation>
@@ -272,50 +273,39 @@ Developed by: Rim BEN DHAOU
   <xs:element name='UDPPayload'>
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="afdx:DataSet" >
-          <xs:annotation>
-            <xs:appinfo source="http://www.ogf.org/dfdl/">
-              <dfdl:setVariable ref="afdx:CodageARINC429"  value="BCD"/>
-            </xs:appinfo>
-          </xs:annotation>
-          </xs:element>
+        <xs:element ref="afdx:DataSet"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
   <!-- Data Set-->
   <xs:element name='DataSet'>
-    <xs:complexType>
+    <xs:complexType> 
       <xs:sequence>
         <!-- codage BNR or BCD-->
-        <xs:element name="codage" type="afdx:bit" dfdl:length="8">
-            <xs:annotation>
-              <xs:appinfo source="http://www.ogf.org/dfdl/">
-                <dfdl:assert message="Codage must be BCD or BNR."
-                             test="{ (xs:unsignedInt(.) eq 0) or (xs:unsignedInt(.) eq 1) }" />
-              </xs:appinfo>
-            </xs:annotation>
-          </xs:element>
-        <!-- nb bits-->
-        <xs:element name="NbBits" type="afdx:bit" dfdl:length="8"/>
-        <xs:element name="Resolution_sign" type="afdx:bit" dfdl:length="8">
-          <xs:annotation>
-            <xs:appinfo source="http://www.ogf.org/dfdl/">
-              <dfdl:assert message="Resolution sign must be 0:plus or 1:minus or 2:plus or minus."
-                           test="{ (xs:unsignedInt(.) eq 0) or (xs:unsignedInt(.) eq 1) or (xs:unsignedInt(.) eq 2) }" />
-            </xs:appinfo>
-          </xs:annotation>
+        <xs:annotation>
+          <xs:appinfo source="http://www.ogf.org/dfdl/">
+            <!-- set codage variable to BNR or BCD-->
+            <dfdl:setVariable ref="afdx:CodageARINC429"  value="BNR"/>
+            <!-- set Nb Bits variable -->
+            <dfdl:setVariable ref="afdx:NbOfBits"  value="18"/>
+            <!-- set resolution variable -->
+            <dfdl:setVariable ref="afdx:Resolution"  value="0.0078125"/>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:element name="parameters">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NbOfBits" type="xs:string" dfdl:inputValueCalc="{ $afdx:NbOfBits }"/>
+              <xs:element name="Resolution" type="xs:string" dfdl:inputValueCalc="{ $afdx:Resolution }"/>
+            </xs:sequence>
+          </xs:complexType>
         </xs:element>
-        <xs:element name="ResolutionMajor" type="afdx:bit" dfdl:length="32"/>
-        <xs:element name="ResolutionMinor" type="xs:hexBinary" dfdl:lengthKind="explicit" dfdl:length="6" dfdl:lengthUnits="bytes" dfdl:byteOrder="bigEndian"/>
-        
-        
-        <!-- Resolution-->
         <xs:element ref="afdx:ARINC429Data"/>
-      </xs:sequence>
+      </xs:sequence>  
     </xs:complexType>
   </xs:element>
-  
+
   <!-- ARINC429 data-->
     <xs:element name='ARINC429Data'>
     <xs:complexType>
@@ -326,7 +316,6 @@ Developed by: Rim BEN DHAOU
           <xs:element name="Label2" type="afdx:bit" dfdl:length="3" />
           <xs:element name="Label3" type="afdx:bit" dfdl:length="3" />
         </xs:sequence>
-        <!--xs:element name="Label" type="xs:string" dfdl:inputValueCalc="{ fn:concat(../Label1, ../Label2, ../Label3) }"/-->
         <xs:choice>
           <xs:element ref="afdx:ARINC429DataBCD" />
           <xs:element ref="afdx:ARINC429DataBNR" />
@@ -341,7 +330,7 @@ Developed by: Rim BEN DHAOU
       <xs:sequence>
         <xs:annotation>
           <xs:appinfo source="http://www.ogf.org/dfdl/">
-            
+            <!--dfdl:setVariable ref="afdx:CodageARINC429"  value="BNR"/-->
             <dfdl:discriminator message="Not BNR data" test="{ $afdx:CodageARINC429 eq 'BNR'  }" />
             
           </xs:appinfo>
@@ -360,7 +349,7 @@ Developed by: Rim BEN DHAOU
       <xs:sequence>
         <xs:annotation>
           <xs:appinfo source="http://www.ogf.org/dfdl/">
-            
+            <!--dfdl:setVariable ref="afdx:CodageARINC429"  value="BNR"/-->
             <!--dfdl:discriminator message="Not BCD data" test="{ xs:unsignedInt(../../codage) eq 1 }" /-->
             <dfdl:discriminator message="Not BCD data" test="{ $afdx:CodageARINC429 eq 'BCD' }" />
           </xs:appinfo>

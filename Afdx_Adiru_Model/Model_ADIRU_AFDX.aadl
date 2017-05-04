@@ -9,7 +9,7 @@ public
   with adiru_memory;
   with partitions;
   with ARINC653;
-  with ID_Properties;
+  
   
   
   AFDX_Net renames VIRTUAL BUS AFDX::Network;
@@ -138,13 +138,17 @@ public
       VL2 : VIRTUAL BUS AFDX::Virtual_Link;
       VL3 : VIRTUAL BUS AFDX::Virtual_Link;
   	PROPERTIES
-  	  -- Modification for resolute validation	
-  	  ID_Properties::busType => afdx;
       -- Setup virtual links configuration
       AFDX_Properties::BAG => 1 ms applies to VL1,VL2,VL3;
       AFDX_Properties::Lmax => 1518 Bytes applies to VL1;
       AFDX_Properties::Lmax => 512 Bytes applies to VL2,VL3;
       AFDX_Properties::SkewMax => 1 ms applies to VL1,VL2,VL3;
+    
+   -- annex resolute {** 
+   --   		prove check_arinc664_VL (this)
+      
+   --	 **};
+		
   END AFDX_Net.i;
   
   
