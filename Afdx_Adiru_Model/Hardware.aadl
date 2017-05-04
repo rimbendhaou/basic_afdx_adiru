@@ -4,6 +4,7 @@ public
   WITH AFDX_Properties;
   WITH dataType;
   with ARINC653;
+  with ID_Properties;
 
 ------------------------------------------------------------------
 --- 1. HW_Platform
@@ -52,7 +53,9 @@ public
 
   SYSTEM IMPLEMENTATION Module.i
     SUBCOMPONENTS
-      CPU : PROCESSOR CPU_with_PCI;
+      --CPU : PROCESSOR CPU_with_PCI;
+      --modified for resolute validation
+      CPU : PROCESSOR CPU_with_PCI.i;
       AFDX_ES : DEVICE AFDX_Card;
       PCI_BUS : BUS;
     CONNECTIONS
@@ -70,7 +73,7 @@ public
       pci : REQUIRES BUS ACCESS;
     properties
       Scheduling_Protocol => (POSIX_1003_HIGHEST_PRIORITY_FIRST_PROTOCOL);
-      --ARINC653::Module_Major_Frame => 50ms;
+     
       
   END CPU_with_PCI;
   
@@ -101,6 +104,25 @@ public
     Duration  => 25 ms;
     Periodic_Processing_Start => true;]
     );
+     ARINC653::HM_Error_ID_Levels =>
+           ([ErrorIdentifier => 1; Description => "Deadline Missed"; ErrorLevel => Process_Level ; ErrorCode => Deadline_Miss;],
+     	    [ErrorIdentifier => 2; Description => "Application Error"           ; ErrorLevel => Process_Level ; ErrorCode => Application_Error;],
+     	    [ErrorIdentifier => 3; Description => "Numeric Error"               ; ErrorLevel => Process_Level ; ErrorCode => Numeric_Error;],
+     	    [ErrorIdentifier => 4; Description => "Illegal Request"             ; ErrorLevel => Process_Level ; ErrorCode => Illegal_Request;],
+     	    [ErrorIdentifier => 5; Description => "Stack Overflow"              ; ErrorLevel => Process_Level ; ErrorCode => Stack_Overflow;],
+     	    [ErrorIdentifier => 6; Description => "Memory Violation"            ; ErrorLevel => Process_Level ; ErrorCode => Memory_Violation;],
+     	    [ErrorIdentifier => 7; Description => "Hardware Fault"              ; ErrorLevel => Process_Level ; ErrorCode => Hardware_Fault;],
+     	    [ErrorIdentifier => 8; Description => "Power Failure"               ; ErrorLevel => Process_Level ; ErrorCode => Power_Fail;]);
+
+    ARINC653::HM_Error_ID_Actions =>
+           ([ErrorIdentifier => 1 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 2 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 3 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 4 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 5 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 6 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 7 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 8 ; Description => "Ignore the error"; Action => "ignore";]);
   end CPU_with_PCI.i;
   
   
@@ -125,6 +147,7 @@ public
 		afdx_p4 : REQUIRES BUS ACCESS AFDX::Wire;
     PROPERTIES
       AFDX_Properties::Supported_Port_Speeds => (10 MBytesps,100 MBytesps);
+      ID_Properties::deviceType => Switch;
   END AFDXSwitch_4p;
   
   device RDC

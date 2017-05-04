@@ -7,6 +7,10 @@ public
   WITH AFDX_Properties;
   WITH Resolute_validate;
   with adiru_memory;
+  with partitions;
+  with ARINC653;
+  with ID_Properties;
+  
   
   AFDX_Net renames VIRTUAL BUS AFDX::Network;
 
@@ -24,10 +28,18 @@ public
       HW_Platform : SYSTEM Hardware::HW_Platform.i;
       Software_Layer : SYSTEM Software::Software_Layer.i;
       -- ARINC-653 Configuration
-      ADIRU_P1 : VIRTUAL PROCESSOR;
-      ADIRU_P2 : VIRTUAL PROCESSOR;
-      ADIRU_P3 : VIRTUAL PROCESSOR;
-      FMS_P1 : VIRTUAL PROCESSOR;
+      ADIRU_P1 : VIRTUAL PROCESSOR partitions::acc_partition.impl
+               { ARINC653::Partition_Identifier => 1;
+                 ARINC653::Partition_Name       => "partition1"; };
+      ADIRU_P2 : VIRTUAL PROCESSOR  partitions::acc_partition.impl
+               { ARINC653::Partition_Identifier => 2;
+                 ARINC653::Partition_Name       => "partition2"; };
+      ADIRU_P3 : VIRTUAL PROCESSOR partitions::acc_partition.impl
+               { ARINC653::Partition_Identifier => 3;
+                 ARINC653::Partition_Name       => "partition3"; };
+      FMS_P1 : VIRTUAL PROCESSOR partitions::acc_partition.impl
+               { ARINC653::Partition_Identifier => 4;
+                 ARINC653::Partition_Name       => "partition4"; };
       
       -- AFDX Configuration
       AFDX_Network : VIRTUAL BUS AFDX_Net.i;
@@ -113,7 +125,10 @@ public
       
    annex resolute {**
 	prove (check_arinc653_compliance())
+	prove (check_arinc664_compliance())
 **};   
+
+  
   end afdx_adiru_model.i;   
     
     
@@ -122,7 +137,9 @@ public
       VL1 : VIRTUAL BUS AFDX::Virtual_Link;
       VL2 : VIRTUAL BUS AFDX::Virtual_Link;
       VL3 : VIRTUAL BUS AFDX::Virtual_Link;
-    PROPERTIES
+  	PROPERTIES
+  	  -- Modification for resolute validation	
+  	  ID_Properties::busType => afdx;
       -- Setup virtual links configuration
       AFDX_Properties::BAG => 1 ms applies to VL1,VL2,VL3;
       AFDX_Properties::Lmax => 1518 Bytes applies to VL1;

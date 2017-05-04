@@ -271,6 +271,15 @@
         </ownedValue>
         <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../ID_Properties.aadl#ID_Properties.deviceType"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../ID_Properties.aadl#/0/@ownedProperty.0/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
       <featureInstance name="afdx_p1" dstConnectionInstance="//@componentInstance.1/@connectionInstance.1" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
@@ -457,6 +466,15 @@
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../ID_Properties.aadl#ID_Properties.deviceType"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../ID_Properties.aadl#/0/@ownedProperty.0/@ownedPropertyType/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
       <featureInstance name="afdx_p1" dstConnectionInstance="//@componentInstance.1/@connectionInstance.3" category="busAccess" direction="in out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -700,6 +718,391 @@
       </componentInstance>
       <componentInstance name="CPU" category="processor">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Module_Major_Frame"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="100">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Module_Schedule"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.2/@componentInstance.0"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.2/@componentInstance.1"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.2/@componentInstance.2"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.8/@componentInstance.2/@componentInstance.3"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.HM_Error_ID_Levels"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="1"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Deadline Missed"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.7"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Application Error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.8"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="3"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Numeric Error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.9"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="4"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Illegal Request"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.10"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="5"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Stack Overflow"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.11"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="6"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Memory Violation"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.12"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="7"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Hardware Fault"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.13"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="8"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Power Failure"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.14"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.2"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.HM_Error_ID_Actions"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="1"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="3"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="4"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="5"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="6"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="7"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="8"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.3"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
           <ownedValue>
             <ownedValue xsi:type="aadl2:ListValue">
@@ -722,6 +1125,66 @@
           </ownedPropertyAssociation>
           <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
         </featureInstance>
+        <componentInstance name="partition_P1" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.0"/>
+          <index>0</index>
+        </componentInstance>
+        <componentInstance name="partition_P2" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.1"/>
+          <index>0</index>
+        </componentInstance>
+        <componentInstance name="partition_P3" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.2"/>
+          <index>0</index>
+        </componentInstance>
+        <componentInstance name="partition_P4" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.3"/>
+          <index>0</index>
+        </componentInstance>
         <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
@@ -836,6 +1299,391 @@
       </componentInstance>
       <componentInstance name="CPU" category="processor">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Module_Major_Frame"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="100">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Module_Schedule"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.2/@componentInstance.0"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.2/@componentInstance.1"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.2/@componentInstance.2"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.9/@componentInstance.2/@componentInstance.3"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.HM_Error_ID_Levels"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="1"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Deadline Missed"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.7"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Application Error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.8"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="3"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Numeric Error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.9"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="4"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Illegal Request"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.10"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="5"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Stack Overflow"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.11"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="6"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Memory Violation"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.12"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="7"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Hardware Fault"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.13"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="8"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Power Failure"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.14"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.2"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.HM_Error_ID_Actions"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="1"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="3"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="4"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="5"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="6"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="7"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="8"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.3"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
           <ownedValue>
             <ownedValue xsi:type="aadl2:ListValue">
@@ -858,6 +1706,66 @@
           </ownedPropertyAssociation>
           <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
         </featureInstance>
+        <componentInstance name="partition_P1" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.0"/>
+          <index>0</index>
+        </componentInstance>
+        <componentInstance name="partition_P2" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.1"/>
+          <index>0</index>
+        </componentInstance>
+        <componentInstance name="partition_P3" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.2"/>
+          <index>0</index>
+        </componentInstance>
+        <componentInstance name="partition_P4" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.3"/>
+          <index>0</index>
+        </componentInstance>
         <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
@@ -972,6 +1880,391 @@
       </componentInstance>
       <componentInstance name="CPU" category="processor">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Module_Major_Frame"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="100">
+              <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Module_Schedule"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.10/@componentInstance.2/@componentInstance.0"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.10/@componentInstance.2/@componentInstance.1"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.10/@componentInstance.2/@componentInstance.2"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.0"/>
+                  <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.1/@componentInstance.10/@componentInstance.2/@componentInstance.3"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
+                    <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.8/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+                </ownedFieldValue>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.HM_Error_ID_Levels"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="1"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Deadline Missed"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.7"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Application Error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.8"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="3"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Numeric Error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.9"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="4"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Illegal Request"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.10"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="5"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Stack Overflow"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.11"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="6"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Memory Violation"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.12"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="7"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Hardware Fault"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.13"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="8"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Power Failure"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.3/@ownedLiteral.2"/>
+                  </ownedValue>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.4/@ownedField.3"/>
+                  <ownedValue xsi:type="aadl2:NamedValue">
+                    <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.0/@ownedLiteral.14"/>
+                  </ownedValue>
+                </ownedFieldValue>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.2"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.HM_Error_ID_Actions"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:ListValue">
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="1"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="3"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="4"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="5"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="6"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="7"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+              <ownedListElement xsi:type="aadl2:RecordValue">
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.0"/>
+                  <ownedValue xsi:type="aadl2:IntegerLiteral" value="8"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.1"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="Ignore the error"/>
+                </ownedFieldValue>
+                <ownedFieldValue>
+                  <property href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.5/@ownedField.2"/>
+                  <ownedValue xsi:type="aadl2:StringLiteral" value="ignore"/>
+                </ownedFieldValue>
+              </ownedListElement>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.3"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
           <ownedValue>
             <ownedValue xsi:type="aadl2:ListValue">
@@ -994,6 +2287,66 @@
           </ownedPropertyAssociation>
           <feature xsi:type="aadl2:BusAccess" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
         </featureInstance>
+        <componentInstance name="partition_P1" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.0"/>
+          <index>0</index>
+        </componentInstance>
+        <componentInstance name="partition_P2" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.1"/>
+          <index>0</index>
+        </componentInstance>
+        <componentInstance name="partition_P3" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.2"/>
+          <index>0</index>
+        </componentInstance>
+        <componentInstance name="partition_P4" category="virtual processor">
+          <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+            <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+            <ownedValue>
+              <ownedValue xsi:type="aadl2:ListValue">
+                <ownedListElement xsi:type="aadl2:NamedValue">
+                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+                </ownedListElement>
+              </ownedValue>
+            </ownedValue>
+            <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+          </ownedPropertyAssociation>
+          <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedVirtualProcessorSubcomponent.3"/>
+          <index>0</index>
+        </componentInstance>
         <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedProcessorSubcomponent.0"/>
         <index>0</index>
       </componentInstance>
@@ -1435,6 +2788,15 @@
     <index>0</index>
   </componentInstance>
   <componentInstance name="AFDX_Network" category="virtual bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../ID_Properties.aadl#ID_Properties.busType"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="../ID_Properties.aadl#/0/@ownedProperty.1/@ownedPropertyType/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
     <componentInstance name="VL1" category="virtual bus">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../../Plugin_Resources/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
@@ -1456,7 +2818,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.Lmax"/>
@@ -1465,7 +2827,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.11/@ownedLiteral.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.SkewMax"/>
@@ -1474,7 +2836,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:VirtualBusSubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedVirtualBusSubcomponent.0"/>
       <index>0</index>
@@ -1502,7 +2864,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.Lmax"/>
@@ -1511,7 +2873,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.11/@ownedLiteral.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.2"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.SkewMax"/>
@@ -1520,7 +2882,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:VirtualBusSubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedVirtualBusSubcomponent.1"/>
       <index>0</index>
@@ -1550,7 +2912,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.Lmax"/>
@@ -1559,7 +2921,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.11/@ownedLiteral.1"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.2"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.SkewMax"/>
@@ -1568,7 +2930,7 @@
             <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
+        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:VirtualBusSubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedVirtualBusSubcomponent.2"/>
       <index>0</index>
@@ -1586,6 +2948,29 @@
       </ownedValue>
       <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.5"/>
     </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Partition_Identifier"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="1"/>
+      </ownedValue>
+      <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Partition_Name"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:StringLiteral" value="partition1"/>
+      </ownedValue>
+      <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.0/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.DAL"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.2/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../partitions.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
     <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.0"/>
     <index>0</index>
   </componentInstance>
@@ -1598,6 +2983,29 @@
         </ownedValue>
       </ownedValue>
       <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.6"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Partition_Identifier"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="2"/>
+      </ownedValue>
+      <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.1/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Partition_Name"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:StringLiteral" value="partition2"/>
+      </ownedValue>
+      <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.1/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.DAL"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.2/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../partitions.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
     </ownedPropertyAssociation>
     <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.1"/>
     <index>0</index>
@@ -1612,6 +3020,29 @@
       </ownedValue>
       <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.7"/>
     </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Partition_Identifier"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="3"/>
+      </ownedValue>
+      <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.2/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Partition_Name"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:StringLiteral" value="partition3"/>
+      </ownedValue>
+      <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.2/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.DAL"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.2/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../partitions.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
     <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.2"/>
     <index>0</index>
   </componentInstance>
@@ -1624,6 +3055,29 @@
         </ownedValue>
       </ownedValue>
       <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.8"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Partition_Identifier"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="4"/>
+      </ownedValue>
+      <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.3/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.Partition_Name"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:StringLiteral" value="partition4"/>
+      </ownedValue>
+      <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.3/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../Plugin_Resources/ARINC653.aadl#ARINC653.DAL"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:NamedValue">
+          <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../Plugin_Resources/ARINC653.aadl#/0/@ownedPropertyType.2/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../partitions.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
     </ownedPropertyAssociation>
     <subcomponent xsi:type="aadl2:VirtualProcessorSubcomponent" href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedVirtualProcessorSubcomponent.3"/>
     <index>0</index>
