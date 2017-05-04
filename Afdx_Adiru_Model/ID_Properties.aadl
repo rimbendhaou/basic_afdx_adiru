@@ -1,0 +1,13 @@
+------------------------------------------------------------------
+-- A property set for AADL models of AFDX networks.
+--
+--     Adding some identification properties 
+--     Rim BEN DHAOU
+------------------------------------------------------------------
+property set ID_Properties is
+
+    deviceType : enumeration (Switch, EndSystem) applies to (device);
+    busType : enumeration (Network, Virtual_link) applies to (VIRTUAL BUS);
+
+end ID_Properties;
+

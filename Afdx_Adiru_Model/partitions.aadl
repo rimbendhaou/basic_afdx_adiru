@@ -1,0 +1,15 @@
+package partitions
+public
+
+  with ARINC653;
+ 
+
+  virtual processor acc_partition
+  properties
+    ARINC653::DAL => LEVEL_A; -- XXX Review value
+  end acc_partition;
+
+  virtual processor implementation acc_partition.impl
+  end acc_partition.impl;
+
+end partitions;

@@ -1,0 +1,48 @@
+package Resolute_afdx
+
+public
+	
+annex resolute {**
+check_arinc664_compliance () <=
+		** "Check compliance of the model with ARINC664 annex" **
+		check_arinc664_virtual_bus() and
+		check_arinc664_switch()
+	
+	-- 
+	-- Virtual bus checks
+    --
+	
+	check_arinc664_virtual_bus () <=
+		** "check Virtual bus" **
+		forall (vb : virtual_bus) . true => check_arinc664_virtual_bus_check (vb)
+		
+		
+	check_arinc664_virtual_bus_check (vb : virtual_bus) <=
+		** "Check virtual bus  " vb **
+		 check_arinc664_virtual_bus_properties (vb) 
+		 
+	check_arinc664_virtual_bus_properties (vb : virtual_bus) <=
+		** "Check compliance of virtual bus " vb " for BAG, SkewMax and Lmax properties" **
+		 
+		 has_property (vb, AFDX_Properties::BAG) and 
+		 has_property (vb, AFDX_Properties::SkewMax) and
+		 has_property (vb, AFDX_Properties::Lmax) 
+		 
+	-- 
+	-- Switch checks
+    --	 
+	check_arinc664_switch() <=
+		 ** "Check compliance of switch " **
+		 forall (sw : device) . true => check_arinc664_switch_check (sw)
+		 
+    check_arinc664_switch_check (sw:device)  <=
+         ** "Check compliance of switch " sw " for VL_ROUTE_TABLE properties" **
+          has_property (sw, AFDX_Properties::VL_Route_Table) 
+		 	
+		
+    
+
+					
+**};
+	
+end Resolute_afdx;
