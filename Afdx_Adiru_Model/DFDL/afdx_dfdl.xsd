@@ -66,6 +66,10 @@ Developed by: Rim BEN DHAOU
   <xs:simpleType name="bit" dfdl:lengthKind="explicit" dfdl:byteOrder="bigEndian" dfdl:lengthUnits="bits">
     <xs:restriction base="xs:unsignedInt" />
   </xs:simpleType>
+  <!-- Simple Types little endian -->
+  <xs:simpleType name="littlebit" dfdl:lengthKind="explicit" dfdl:byteOrder="littleEndian" dfdl:lengthUnits="bits">
+    <xs:restriction base="xs:unsignedInt" />
+  </xs:simpleType>
 
   <xs:simpleType name="hexByte" dfdl:lengthKind="explicit" dfdl:byteOrder="bigEndian" dfdl:lengthUnits="bytes">
     <xs:restriction base="xs:hexBinary" />
@@ -269,7 +273,7 @@ Developed by: Rim BEN DHAOU
     </xs:complexType>
   </xs:element>
 
-  <!-- UDP Payload or afdx payload size between 18…1472-->
+  <!-- UDP Payload or afdx payload size between 18â€¦1472-->
   <xs:element name='UDPPayload'>
     <xs:complexType>
       <xs:sequence>
@@ -289,7 +293,7 @@ Developed by: Rim BEN DHAOU
             <dfdl:setVariable ref="afdx:CodageARINC429"  value="BNR"/>
             <!-- set Nb Bits variable -->
             <dfdl:setVariable ref="afdx:NbOfBits"  value="18"/>
-            <!-- set resolution variable -->
+            <!-- set resolution variable :: use range not resolution -->
             <dfdl:setVariable ref="afdx:Resolution"  value="0.0078125"/>
           </xs:appinfo>
         </xs:annotation>
@@ -310,16 +314,25 @@ Developed by: Rim BEN DHAOU
     <xs:element name='ARINC429Data'>
     <xs:complexType>
       <xs:sequence>
-        <!--xs:sequence dfdl:hiddenGroupRef="afdx:LabelGroup"/-->
-        <xs:sequence>
-          <xs:element name="Label1" type="afdx:bit" dfdl:length="2" />
-          <xs:element name="Label2" type="afdx:bit" dfdl:length="3" />
-          <xs:element name="Label3" type="afdx:bit" dfdl:length="3" />
-        </xs:sequence>
+        
         <xs:choice>
           <xs:element ref="afdx:ARINC429DataBCD" />
           <xs:element ref="afdx:ARINC429DataBNR" />
         </xs:choice>
+        <!--xs:sequence dfdl:hiddenGroupRef="afdx:LabelGroup"/-->
+        <xs:sequence >
+          <xs:element name="Label_1" type="afdx:bit" dfdl:length="1"/>
+          <xs:element name="Label_2" type="afdx:bit" dfdl:length="1"/>
+          <xs:element name="Label_3" type="afdx:bit" dfdl:length="1"/>
+          <xs:element name="Label_4" type="afdx:bit" dfdl:length="1"/>
+          <xs:element name="Label_5" type="afdx:bit" dfdl:length="1"/>
+          <xs:element name="Label_6" type="afdx:bit" dfdl:length="1"/>
+          <xs:element name="Label_7" type="afdx:bit" dfdl:length="1"/>
+          <xs:element name="Label_8" type="afdx:bit" dfdl:length="1"/>
+        </xs:sequence>
+        <xs:element name="Label1" type="xs:unsignedInt" dfdl:inputValueCalc="{ ../Label_1 *1 + ../Label_2 *2 + ../Label_3 *4 }"/>
+        <xs:element name="Label2" type="xs:unsignedInt" dfdl:inputValueCalc="{ ../Label_4 *1 + ../Label_5 *2 + ../Label_6 *4 }"/>
+        <xs:element name="Label3" type="xs:unsignedInt" dfdl:inputValueCalc="{ ../Label_7 *1 + ../Label_8 *2 }"/>
       </xs:sequence>
     </xs:complexType> 
   </xs:element>

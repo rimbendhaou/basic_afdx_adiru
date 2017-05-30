@@ -188,10 +188,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
               </xsl:choose>
             </td>
             <td>
-              18
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/parameters/NbOfBits"/>
             </td>
             <td>
-              0.0124578
+              <xsl:value-of select="afdx:AFDXFrame/afdx:EthernetPayload/afdx:IPv4Payload/afdx:UDPPayload/afdx:DataSet/parameters/Resolution"/>
             </td>
             
           </tr>
