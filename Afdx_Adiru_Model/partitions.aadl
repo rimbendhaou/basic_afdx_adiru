@@ -7,6 +7,8 @@ public
   virtual processor acc_partition
   properties
     ARINC653::DAL => LEVEL_A; -- XXX Review value
+    ARINC653::Partition_Identifier => 1;
+    ARINC653::Partition_Name       => "partition";
   end acc_partition;
 
   virtual processor implementation acc_partition.impl

@@ -134,6 +134,7 @@ public
       pci  : REQUIRES BUS ACCESS;
     PROPERTIES
       AFDX_Properties::Supported_Port_Speeds => (100 MBytesps);
+      ID_Properties::deviceType => EndSystem;
   END AFDX_Card;
   
 ------------------------------------------------------------------
@@ -154,5 +155,7 @@ public
 		features
 			pressure: out event data port dataType::pressure;
 			afdx: requires bus access AFDX::Wire;
+  	Properties
+  		ID_Properties::deviceType => Sensor;
 	end RDC;   
 end Hardware;

@@ -110,18 +110,18 @@ public
             priority => high;
             accountingPolicy => frame;
                                      ]) applies to HW_Platform.SW_1;
-      AFDX_Properties::VL_Route_Table => ([
-            vl => reference (AFDX_Network.VL2);
-            jitter => 16 us;
-            priority => low;
-            accountingPolicy => frame;
-                                     ],
-                                     [
-            vl => reference (AFDX_Network.VL3);
-            jitter => 16 us;
-            priority => high;
-            accountingPolicy => frame;
-                                     ]) applies to HW_Platform.SW_2;
+--      --AFDX_Properties::VL_Route_Table => ([
+--            vl => reference (AFDX_Network.VL2);
+--            jitter => 16 us;
+--            priority => low;
+--            accountingPolicy => frame;
+--                                     ],
+--                                     [
+--            vl => reference (AFDX_Network.VL3);
+--            jitter => 16 us;
+--            priority => high;
+--            accountingPolicy => frame;
+--                                     ]) applies to HW_Platform.SW_2;
       
    annex resolute {**
 	prove (check_arinc653_compliance())

@@ -398,62 +398,6 @@
         <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="../AFDX_Properties.aadl#AFDX_Properties.VL_Route_Table"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="aadl2:RecordValue">
-              <ownedFieldValue>
-                <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.0"/>
-                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.1"/>
-              </ownedFieldValue>
-              <ownedFieldValue>
-                <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.3"/>
-                <ownedValue xsi:type="aadl2:IntegerLiteral" value="16">
-                  <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.2"/>
-                </ownedValue>
-              </ownedFieldValue>
-              <ownedFieldValue>
-                <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.4"/>
-                <ownedValue xsi:type="aadl2:NamedValue">
-                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.4/@ownedPropertyType/@ownedLiteral.1"/>
-                </ownedValue>
-              </ownedFieldValue>
-              <ownedFieldValue>
-                <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.5"/>
-                <ownedValue xsi:type="aadl2:NamedValue">
-                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.5/@ownedPropertyType/@ownedLiteral.1"/>
-                </ownedValue>
-              </ownedFieldValue>
-            </ownedListElement>
-            <ownedListElement xsi:type="aadl2:RecordValue">
-              <ownedFieldValue>
-                <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.0"/>
-                <ownedValue xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.3/@componentInstance.2"/>
-              </ownedFieldValue>
-              <ownedFieldValue>
-                <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.3"/>
-                <ownedValue xsi:type="aadl2:IntegerLiteral" value="16">
-                  <unit href="../../Plugin_Resources/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.12/@ownedLiteral.2"/>
-                </ownedValue>
-              </ownedFieldValue>
-              <ownedFieldValue>
-                <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.4"/>
-                <ownedValue xsi:type="aadl2:NamedValue">
-                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.4/@ownedPropertyType/@ownedLiteral.0"/>
-                </ownedValue>
-              </ownedFieldValue>
-              <ownedFieldValue>
-                <property href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.5"/>
-                <ownedValue xsi:type="aadl2:NamedValue">
-                  <namedValue xsi:type="aadl2:EnumerationLiteral" href="../AFDX_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedElementType/@ownedField.5/@ownedPropertyType/@ownedLiteral.1"/>
-                </ownedValue>
-              </ownedFieldValue>
-            </ownedListElement>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.23"/>
-      </ownedPropertyAssociation>
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../AFDX_Properties.aadl#AFDX_Properties.Supported_Port_Speeds"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
@@ -593,6 +537,15 @@
         </ownedValue>
         <propertyAssociation href="../Model_ADIRU_AFDX.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../ID_Properties.aadl#ID_Properties.deviceType"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="../ID_Properties.aadl#/0/@ownedProperty.0/@ownedPropertyType/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
       <featureInstance name="pressure" category="eventDataPort" direction="out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../Plugin_Resources/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
@@ -666,6 +619,15 @@
             </ownedValue>
           </ownedValue>
           <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../ID_Properties.aadl#ID_Properties.deviceType"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="../ID_Properties.aadl#/0/@ownedProperty.0/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
         </ownedPropertyAssociation>
         <featureInstance name="afdx" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1248,6 +1210,15 @@
           </ownedValue>
           <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
         </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../ID_Properties.aadl#ID_Properties.deviceType"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="../ID_Properties.aadl#/0/@ownedProperty.0/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
         <featureInstance name="afdx" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
             <property href="../AFDX_Properties.aadl#AFDX_Properties.portSpeed"/>
@@ -1828,6 +1799,15 @@
             </ownedValue>
           </ownedValue>
           <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../ID_Properties.aadl#ID_Properties.deviceType"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="../ID_Properties.aadl#/0/@ownedProperty.0/@ownedPropertyType/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Hardware.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
         </ownedPropertyAssociation>
         <featureInstance name="afdx" category="busAccess" direction="in out">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">

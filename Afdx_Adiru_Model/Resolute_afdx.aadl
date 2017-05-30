@@ -22,11 +22,18 @@ check_arinc664_compliance () <=
 		 check_arinc664_virtual_bus_properties (vb) 
 		 
 	check_arinc664_virtual_bus_properties (vb : virtual_bus) <=
-		** "Check compliance of virtual bus " vb " for BAG, SkewMax and Lmax properties" **
+		** "Check compliance of virtual bus network" vb " for Virtual links subcomponant" **
+		 
+		 forall (vbs : virtual_bus) . (parent (vbs) = vb) => check_arinc664_check_vl (vbs) 
+	
+	
+	check_arinc664_check_vl (vb : virtual_bus) <=
+		** "Check compliance of virtual link " vb " for BAG, SkewMax and Lmax properties" **
 		 
 		 has_property (vb, AFDX_Properties::BAG) and 
 		 has_property (vb, AFDX_Properties::SkewMax) and
 		 has_property (vb, AFDX_Properties::Lmax) 
+		 
 		 
 	-- 
 	-- Switch checks
@@ -36,13 +43,15 @@ check_arinc664_compliance () <=
 		 forall (sw : device) . true => check_arinc664_switch_check (sw)
 		 
     check_arinc664_switch_check (sw:device)  <=
-         ** "Check compliance of switch " sw " for VL_ROUTE_TABLE properties" **
-          has_property (sw, AFDX_Properties::VL_Route_Table) 
+         ** "Check compliance of device switch " sw **
+          
+          (has_property (sw,ID_Properties::deviceType) and
+          (property(sw, ID_Properties::deviceType) = "Switch") and
+          has_property (sw, AFDX_Properties::VL_Route_Table) )
+          or (property(sw, ID_Properties::deviceType) = "EndSystem")
+          or (property(sw, ID_Properties::deviceType) = "Sensor")
 		 	
-		
-    
-
-					
+    				
 **};
 	
 end Resolute_afdx;
