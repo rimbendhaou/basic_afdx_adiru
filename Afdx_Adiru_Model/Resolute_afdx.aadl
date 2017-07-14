@@ -1,43 +1,40 @@
 package Resolute_afdx
-
 public
-	
+
 annex resolute {**
-check_arinc664_compliance () <=
+    check_arinc664_compliance () <=
 		** "Check compliance of the model with ARINC664 annex" **
-		check_arinc664_virtual_bus() and
-		check_arinc664_switch()
+		check_arinc664_network()
+		and check_arinc664_switch()
 	
 	-- 
 	-- Virtual bus checks
     --
+
+	check_arinc664_network () <=
+		** "Check existence of main network and presence of virtual links" **
+		exists (vb : virtual_bus) . true  =>
+		    has_property(vb, ID_Properties::busType) and
+		    property(vb, ID_Properties::busType) = "Network" and
+		    check_arinc664_virtual_links(vb)
+	         
+	check_arinc664_virtual_links (vb : virtual_bus) <=
+		** "Check compliance of network " vb " for virtual link subcomponents" **
+		 forall (vbs : virtual_bus) . parent (vbs) = vb =>
+	         check_arinc664_vl_properties (vbs)
 	
-	check_arinc664_virtual_bus () <=
-		** "check Virtual bus" **
-		forall (vb : virtual_bus) . true => check_arinc664_virtual_bus_check (vb)
-		
-		
-	check_arinc664_virtual_bus_check (vb : virtual_bus) <=
-		** "Check virtual bus  " vb **
-		 check_arinc664_virtual_bus_properties (vb) 
-		 
-	check_arinc664_virtual_bus_properties (vb : virtual_bus) <=
-		** "Check compliance of virtual bus network" vb " for Virtual links subcomponant" **
-		 
-		 forall (vbs : virtual_bus) . (parent (vbs) = vb) => check_arinc664_check_vl (vbs) 
-	
-	
-	check_arinc664_check_vl (vb : virtual_bus) <=
-		** "Check compliance of virtual link " vb " for BAG, SkewMax and Lmax properties" **
+	check_arinc664_vl_properties (vb : virtual_bus) <=
+		** "Check compliance of virtual link " vb " for BAG, SkewMax, Lmax and busType properties" **
 		 
 		 has_property (vb, AFDX_Properties::BAG) and 
 		 has_property (vb, AFDX_Properties::SkewMax) and
-		 has_property (vb, AFDX_Properties::Lmax) 
-		 
+		 has_property (vb, AFDX_Properties::Lmax) and
+		 has_property (vb, ID_Properties::busType) and (property(vb, ID_Properties::busType) = "Virtual_link")
 		 
 	-- 
 	-- Switch checks
     --	 
+    
 	check_arinc664_switch() <=
 		 ** "Check compliance of switch " **
 		 forall (sw : device) . true => check_arinc664_switch_check (sw)
@@ -53,5 +50,4 @@ check_arinc664_compliance () <=
 		 	
     				
 **};
-	
 end Resolute_afdx;
