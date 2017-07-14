@@ -5,49 +5,50 @@ public
 ------------------------------------------------------------------
 ---  AFDXWire
 ------------------------------------------------------------------
-  BUS Wire
-  END Wire;
+	BUS Wire
+	END Wire;
 
 ------------------------------------------------------------------
 ---  AFDXSwitch
 ------------------------------------------------------------------
-  ABSTRACT Switch
-  END Switch;
+	ABSTRACT Switch
+	END Switch;
 
 ------------------------------------------------------------------
 ---  AFDX End System
 ------------------------------------------------------------------
-  ABSTRACT End_System
-    FEATURES
-      afdx : REQUIRES BUS ACCESS Wire;
-  END End_System;
-  
+	ABSTRACT End_System
+		FEATURES
+			afdx: REQUIRES BUS ACCESS Wire;
+	END End_System;
+
 ------------------------------------------------------------------
 ---  AFDX NETWORK
 ------------------------------------------------------------------  
-  VIRTUAL BUS Network
-    PROPERTIES
-    -- Modification for resolute validation	
-  	  ID_Properties::busType => Network;
-  END Network;
+	VIRTUAL BUS Network
+		PROPERTIES
+			-- Modification for resolute validation	
+			ID_Properties::busType => Network;
+	END Network;
 
-  VIRTUAL BUS IMPLEMENTATION Network.i
-  END Network.i;
-  
-  
+	VIRTUAL BUS IMPLEMENTATION Network.i
+	END Network.i;
+
 ------------------------------------------------------------------
 ---  Virtual Link
 ------------------------------------------------------------------  
-  VIRTUAL BUS Virtual_Link
-  END Virtual_Link;
-  
-  VIRTUAL BUS IMPLEMENTATION Virtual_Link.i
-  END Virtual_Link.i;
+	VIRTUAL BUS Virtual_Link
+		PROPERTIES
+			-- Modification for resolute validation	
+			ID_Properties::busType => Virtual_Link;
+	END Virtual_Link;
 
-  VIRTUAL BUS IMPLEMENTATION Virtual_Link.dup
-    SUBCOMPONENTS
-      netA : VIRTUAL BUS Virtual_Link;
-      netB : VIRTUAL BUS Virtual_Link;
-  END Virtual_Link.dup;
-  
+	VIRTUAL BUS IMPLEMENTATION Virtual_Link.i
+	END Virtual_Link.i;
+
+	VIRTUAL BUS IMPLEMENTATION Virtual_Link.dup
+		SUBCOMPONENTS
+			netA: VIRTUAL BUS Virtual_Link;
+			netB: VIRTUAL BUS Virtual_Link;
+	END Virtual_Link.dup;
 end AFDX;
