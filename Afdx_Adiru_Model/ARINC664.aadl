@@ -1,0 +1,9 @@
+property set ARINC664 is 
+
+--Name of the DFDL Frame Schema File
+Frame_Schema : aadlstring applies to (port,data);
+
+--Name of the AFDX Frame File
+Frame_AFDX : aadlstring applies to (port,data);
+
+end ARINC664;
