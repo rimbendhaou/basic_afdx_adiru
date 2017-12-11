@@ -6,8 +6,8 @@
 ------------------------------------------------------------------
 property set ID_Properties is
 
-    deviceType : enumeration (Switch, EndSystem, Sensor) applies to (device);
-    busType : enumeration (Network, Virtual_link) applies to (VIRTUAL BUS);
+    Device_Type : enumeration (Switch, EndSystem, Sensor) applies to (device);
+    Bus_Type : enumeration (Network, Virtual_link) applies to (VIRTUAL BUS);
 
 end ID_Properties;
 

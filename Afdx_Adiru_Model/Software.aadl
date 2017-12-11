@@ -1,6 +1,7 @@
 package Software
 Public
 with dataType;
+with ARINC664;
 ------------------------------------------------------------------
 -- Dummy model of software layer with a few proccesses
 -- connected via sampling and queueing ports.
@@ -10,61 +11,68 @@ with dataType;
   
   SYSTEM IMPLEMENTATION Software_Layer.i
     SUBCOMPONENTS
-      P_1 : PROCESS P_1;
-      P_2 : PROCESS P_2;
-      P_3 : PROCESS P_3;
-      P_4 : PROCESS P_4;
+      ADIRU_P1 : PROCESS ADIRU_Process1;
+      ADIRU_P2 : PROCESS ADIRU_Process2;
+      ADIRU_P3 : PROCESS ADIRU_Process3;
+      FMS_P : PROCESS FMS_Process;
       
     CONNECTIONS
-      CQ_1_2: PORT P_1.qout1->P_2.qin1;
-      CS_1_2: PORT P_1.sout2->P_2.sin2;
-      C_2_3 : PORT P_2.qout1->P_3.qin1;
-      C_1_3 : PORT P_1.sout2->P_3.sin2;
-      C_1_4 : PORT P_1.sout2->P_4.sin2;
-      C_2_4 : PORT P_2.sout3->P_4.sin3;
+      C_1_3: PORT ADIRU_P1.P1_out1->ADIRU_P3.P3_in1;
+      C_1_FMS: PORT ADIRU_P1.P1_out2->FMS_P.FMS_in1;
+      C_2_3 : PORT ADIRU_P2.P2_out1->ADIRU_P3.P3_in2;
+      C_2_FMS : PORT ADIRU_P2.P2_out2->FMS_P.FMS_in2;
+      C_3_FMS : PORT ADIRU_P3.P3_out1->FMS_P.FMS_in3;
+      C_FMS_1 : PORT FMS_P.FMS_out1->ADIRU_P1.P1_in1;
+      C_FMS_2 : PORT FMS_P.FMS_out2->ADIRU_P2.P2_in1;
       
   END Software_Layer.i;
 
 ------------------------------------------------------------------
---- 2.1 Process P_1
+--- 2.1 ADIRU Process 1
 ------------------------------------------------------------------
-  PROCESS P_1
-    FEATURES
-      qout1 : OUT EVENT DATA PORT  ;
-      sout2 : OUT DATA PORT dataType::inertial_altitude;
-      --sin_pression : IN DATA PORT dataType::pression;
-      --qout_pression : OUT EVENT DATA PORT dataType::pression;
-  END P_1;
-
-------------------------------------------------------------------
---- 2.2 Process P_2
-------------------------------------------------------------------
-  PROCESS P_2
-    FEATURES
-      qin1 : IN EVENT DATA PORT;
-      qout1 : OUT EVENT DATA PORT;
-      sin2 : IN DATA PORT dataType::inertial_altitude;
-      sout3 : OUT DATA PORT dataType::pressure;
-      
-  END P_2;
-
-------------------------------------------------------------------
---- 2.3 Process P_3
-------------------------------------------------------------------
-  PROCESS P_3
-    FEATURES
-      qin1 : IN EVENT DATA PORT;
-      sin2 : IN DATA PORT dataType::inertial_altitude;
-  END P_3;
-
-------------------------------------------------------------------
---- 2.4 Process P_4
-------------------------------------------------------------------
-  PROCESS P_4
+  PROCESS ADIRU_Process1
   	FEATURES
-      --sin1 : IN EVENT DATA PORT dataType::pression;
-      sin2 : IN DATA PORT dataType::inertial_altitude;
-      sin3 : IN DATA PORT dataType::pressure;
-  END P_4;
+  	  P1_in1 : IN DATA PORT;	
+      P1_out1 : OUT DATA PORT;
+      P1_out2 : OUT DATA PORT DataType::Pressure
+      { ARINC664::Frame_Schema => "schema_DFDL.xsd";
+        ARINC664::Frame_AFDX   => "frame_AFDX.afdx"; };
+  END ADIRU_Process1;
+
+------------------------------------------------------------------
+--- 2.2 ADIRU Process 2
+------------------------------------------------------------------
+  PROCESS ADIRU_Process2
+    FEATURES
+      P2_in1 : IN DATA PORT;
+      P2_out1 : OUT DATA PORT DataType::Inertial_Altitude;
+      --{ARINC653::Sampling_Refresh_Period => 25 ms;};
+      P2_out2 : OUT DATA PORT;
+      
+  END ADIRU_Process2;
+
+------------------------------------------------------------------
+--- 2.3 ADIRU Process 3
+------------------------------------------------------------------
+  PROCESS ADIRU_Process3
+    FEATURES
+      P3_in1 : IN DATA PORT;
+      P3_in2 : IN DATA PORT DataType::Inertial_Altitude;
+      P3_out1: OUT DATA PORT DataType::Inertial_Altitude;
+  END ADIRU_Process3;
+
+------------------------------------------------------------------
+--- 2.4 FMS_Process
+------------------------------------------------------------------
+  PROCESS FMS_Process
+  	FEATURES
+      FMS_in1 : IN DATA PORT DataType::Pressure
+      { ARINC664::Frame_Schema => "schema_DFDL.xsd";
+        ARINC664::Frame_AFDX   => "frame_AFDX.afdx"; };
+      FMS_in2 : IN DATA PORT;
+      FMS_in3 : IN DATA PORT DataType::Inertial_Altitude;
+      FMS_out1 : OUT DATA PORT;
+      FMS_out2 : OUT DATA PORT;
+  END FMS_Process;
 
 END Software;

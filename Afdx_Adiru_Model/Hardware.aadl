@@ -7,14 +7,14 @@ public
   with ID_Properties;
 
 ------------------------------------------------------------------
---- 1. HW_Platform
+--- 1. Hardware_Layer : The Platform Execution
 ------------------------------------------------------------------
-  SYSTEM HW_Platform
-  END HW_Platform;
+  SYSTEM Hardware_Layer
+  END Hardware_Layer;
   
-  SYSTEM IMPLEMENTATION HW_Platform.i
+  SYSTEM IMPLEMENTATION Hardware_Layer.i
     SUBCOMPONENTS
-      CPM_1 : SYSTEM Module.i; -- Processor or System
+      CPM_1 : SYSTEM Module.imp1; -- Processor or System
       CPM_2 : SYSTEM Module.i; -- Processor or System
       CPM_3 : SYSTEM Module.i; -- Processor or System
      
@@ -24,23 +24,22 @@ public
       WIRE_4 : BUS AFDX::Wire; -- Bus
       WIRE_5 : BUS AFDX::Wire; -- Bus
     
-      SW_1 : DEVICE AFDXSwitch_4p; -- Device or System
-      SW_2 : DEVICE AFDXSwitch_4p; -- Device or System
+      Switch_1 : DEVICE Switch; -- Device or System
+      Switch_2 : DEVICE Switch; -- Device or System
      
-      sensor_rdc: device RDC; -- RDC
+      RDC_Sensor: device RDC; -- RDC
     CONNECTIONS
       WIRE_1_CPM_1: BUS ACCESS WIRE_1->CPM_1.afdx;
-      WIRE_1_SW_1:  BUS ACCESS WIRE_1->SW_1.afdx_p1;
-      WIRE_3_SW_1:  BUS ACCESS WIRE_3->SW_1.afdx_p3;
+      WIRE_1_SW_1:  BUS ACCESS WIRE_1->Switch_1.afdx_p1;
+      WIRE_3_SW_1:  BUS ACCESS WIRE_3->Switch_1.afdx_p3;
       WIRE_1_CPM_2: BUS ACCESS WIRE_3->CPM_2.afdx;
-      WIRE_2_SW_1:  BUS ACCESS WIRE_2->SW_1.afdx_p4;
-      WIRE_2_SW_2:  BUS ACCESS WIRE_2->SW_2.afdx_p1;
-      WIRE_4_SW_2:  BUS ACCESS WIRE_4->SW_2.afdx_p4;
+      WIRE_2_Switch_1:  BUS ACCESS WIRE_2->Switch_1.afdx_p4;
+      WIRE_2_Switch_2:  BUS ACCESS WIRE_2->Switch_2.afdx_p1;
+      WIRE_4_Switch_2:  BUS ACCESS WIRE_4->Switch_2.afdx_p4;
       WIRE_4_CPM_3: BUS ACCESS WIRE_4->CPM_3.afdx;
-      WIRE_5_RDC: BUS ACCESS WIRE_5->sensor_rdc.afdx;
-      
-      WIRE_5_SW_1:  BUS ACCESS WIRE_5->SW_1.afdx_p2;
-  END HW_Platform.i;  
+      WIRE_5_RDC: BUS ACCESS WIRE_5->RDC_Sensor.afdx;
+      WIRE_5_Switch_1:  BUS ACCESS WIRE_5->Switch_1.afdx_p2;
+  END Hardware_Layer.i;  
  
  
 ------------------------------------------------------------------
@@ -56,13 +55,29 @@ public
       --CPU : PROCESSOR CPU_with_PCI;
       --modified for resolute validation
       CPU : PROCESSOR CPU_with_PCI.i;
-      AFDX_ES : DEVICE AFDX_Card;
+      AFDX_EndSystem : DEVICE AFDX_Card;
       PCI_BUS : BUS;
     CONNECTIONS
       CPU_PCI: BUS ACCESS PCI_BUS->CPU.pci;
-      AFDX_ES_PCI: BUS ACCESS PCI_BUS->AFDX_ES.pci;
-      AFDX_EXT: BUS ACCESS AFDX_ES.afdx->afdx;
+      AFDX_ES_PCI: BUS ACCESS PCI_BUS->AFDX_EndSystem.pci;
+      AFDX_EXT: BUS ACCESS AFDX_EndSystem.afdx->afdx;
   END Module.i;
+  
+  ------------------------------------------------------------------
+---  Module implementation (added for ARINC653 validation Major Frame )
+------------------------------------------------------------------
+  SYSTEM IMPLEMENTATION Module.imp1
+    SUBCOMPONENTS
+      --CPU : PROCESSOR CPU_with_PCI;
+      --modified for ARINC653 validation Major Frame
+      CPU : PROCESSOR CPU_with_PCI.imp1;
+      AFDX_EndSystem : DEVICE AFDX_Card;
+      PCI_BUS : BUS;
+    CONNECTIONS
+      CPU_PCI: BUS ACCESS PCI_BUS->CPU.pci;
+      AFDX_ES_PCI: BUS ACCESS PCI_BUS->AFDX_EndSystem.pci;
+      AFDX_EXT: BUS ACCESS AFDX_EndSystem.afdx->afdx;
+  END Module.imp1;
   
 
 ------------------------------------------------------------------
@@ -73,34 +88,73 @@ public
       pci : REQUIRES BUS ACCESS;
     properties
       Scheduling_Protocol => (POSIX_1003_HIGHEST_PRIORITY_FIRST_PROTOCOL);
-     
-      
+       
   END CPU_with_PCI;
   
-  
+ ------------------------------------------------------------------
+--- 1.2.1 CPU_with_PCI Processor implementation (added for ARINC653 validation Major Frame)
+------------------------------------------------------------------
+  processor implementation CPU_with_PCI.imp1
+  subcomponents
+    Partition_P1 : virtual processor;
+    Partition_P2 : virtual processor;
+   
+  properties
+    ARINC653::Module_Major_Frame => 50ms;
+
+    ARINC653::Module_Schedule => (
+    [Partition => reference (Partition_P1);
+    Duration  => 25 ms;
+    Periodic_Processing_Start => true;],
+    [Partition => reference (Partition_P2);
+    Duration  => 25 ms;
+    Periodic_Processing_Start => true;]
+    
+    );
+     ARINC653::HM_Error_ID_Levels =>
+           ([ErrorIdentifier => 1; Description => "Deadline Missed"; ErrorLevel => Process_Level ; ErrorCode => Deadline_Miss;],
+     	    [ErrorIdentifier => 2; Description => "Application Error"           ; ErrorLevel => Process_Level ; ErrorCode => Application_Error;],
+     	    [ErrorIdentifier => 3; Description => "Numeric Error"               ; ErrorLevel => Process_Level ; ErrorCode => Numeric_Error;],
+     	    [ErrorIdentifier => 4; Description => "Illegal Request"             ; ErrorLevel => Process_Level ; ErrorCode => Illegal_Request;],
+     	    [ErrorIdentifier => 5; Description => "Stack Overflow"              ; ErrorLevel => Process_Level ; ErrorCode => Stack_Overflow;],
+     	    [ErrorIdentifier => 6; Description => "Memory Violation"            ; ErrorLevel => Process_Level ; ErrorCode => Memory_Violation;],
+     	    [ErrorIdentifier => 7; Description => "Hardware Fault"              ; ErrorLevel => Process_Level ; ErrorCode => Hardware_Fault;],
+     	    [ErrorIdentifier => 8; Description => "Power Failure"               ; ErrorLevel => Process_Level ; ErrorCode => Power_Fail;]);
+
+    ARINC653::HM_Error_ID_Actions =>
+           ([ErrorIdentifier => 1 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 2 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 3 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 4 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 5 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 6 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 7 ; Description => "Ignore the error"; Action => "ignore";],
+            [ErrorIdentifier => 8 ; Description => "Ignore the error"; Action => "ignore";]);
+  end CPU_with_PCI.imp1;
+   
 ------------------------------------------------------------------
 --- 1.2.1 CPU_with_PCI Processor implementation (added for resolute validation)
 ------------------------------------------------------------------
   processor implementation CPU_with_PCI.i
   subcomponents
-    partition_P1 : virtual processor;
-    partition_P2 : virtual processor;
-    partition_P3 : virtual processor;
-    partition_P4 : virtual processor;
+    Partition_P1 : virtual processor;
+    Partition_P2 : virtual processor;
+    Partition_P3 : virtual processor;
+    Partition_P4 : virtual processor;
   properties
     ARINC653::Module_Major_Frame => 100ms;
 
     ARINC653::Module_Schedule => (
-    [Partition => reference (partition_P1);
+    [Partition => reference (Partition_P1);
     Duration  => 25 ms;
     Periodic_Processing_Start => true;],
-    [Partition => reference (partition_P2);
+    [Partition => reference (Partition_P2);
     Duration  => 25 ms;
     Periodic_Processing_Start => true;],
-    [Partition => reference (partition_P3);
+    [Partition => reference (Partition_P3);
     Duration  => 25 ms;
     Periodic_Processing_Start => true;],
-    [Partition => reference (partition_P4);
+    [Partition => reference (Partition_P4);
     Duration  => 25 ms;
     Periodic_Processing_Start => true;]
     );
@@ -134,28 +188,28 @@ public
       pci  : REQUIRES BUS ACCESS;
     PROPERTIES
       AFDX_Properties::Supported_Port_Speeds => (100 MBytesps);
-      ID_Properties::deviceType => EndSystem;
+      ID_Properties::Device_Type => EndSystem;
   END AFDX_Card;
   
 ------------------------------------------------------------------
 --- 1.4 AFDXSwitch - An implementation with 4 port 
 ------------------------------------------------------------------
-  DEVICE AFDXSwitch_4p EXTENDS AFDX::Switch
+  DEVICE Switch EXTENDS AFDX::Switch
 	FEATURES
-		afdx_p1 : REQUIRES BUS ACCESS AFDX::Wire;
-		afdx_p2 : REQUIRES BUS ACCESS AFDX::Wire;
-		afdx_p3 : REQUIRES BUS ACCESS AFDX::Wire;
-		afdx_p4 : REQUIRES BUS ACCESS AFDX::Wire;
+		Afdx_p1 : REQUIRES BUS ACCESS AFDX::Wire;
+		Afdx_p2 : REQUIRES BUS ACCESS AFDX::Wire;
+		Afdx_p3 : REQUIRES BUS ACCESS AFDX::Wire;
+		Afdx_p4 : REQUIRES BUS ACCESS AFDX::Wire;
     PROPERTIES
       AFDX_Properties::Supported_Port_Speeds => (10 MBytesps,100 MBytesps);
-      ID_Properties::deviceType => Switch;
-  END AFDXSwitch_4p;
+      ID_Properties::Device_Type => Switch;
+  END Switch;
   
   device RDC
 		features
-			pressure: out event data port dataType::pressure;
-			afdx: requires bus access AFDX::Wire;
+			Pressure: out event data port dataType::pressure;
+			Afdx: requires bus access AFDX::Wire;
   	Properties
-  		ID_Properties::deviceType => Sensor;
+  		ID_Properties::Device_Type => Sensor;
 	end RDC;   
 end Hardware;

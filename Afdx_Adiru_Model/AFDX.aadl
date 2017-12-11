@@ -28,7 +28,7 @@ public
 	VIRTUAL BUS Network
 		PROPERTIES
 			-- Modification for resolute validation	
-			ID_Properties::busType => Network;
+			ID_Properties::Bus_Type => Network;
 	END Network;
 
 	VIRTUAL BUS IMPLEMENTATION Network.i
@@ -40,7 +40,7 @@ public
 	VIRTUAL BUS Virtual_Link
 		PROPERTIES
 			-- Modification for resolute validation	
-			ID_Properties::busType => Virtual_Link;
+			ID_Properties::Bus_Type => Virtual_Link;
 	END Virtual_Link;
 
 	VIRTUAL BUS IMPLEMENTATION Virtual_Link.i

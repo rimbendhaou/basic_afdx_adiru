@@ -1,12 +1,12 @@
 package dataType
 public
-	data pressure
+	data Pressure
 		properties
 	    Data_Size => 600 Bytes;
-	end pressure;
+	end Pressure;
 	
-	data inertial_altitude -- label 361 out from IR portion to ADIRS and IRS
+	data Inertial_Altitude -- label 361 out from IR portion to ADIRS and IRS
 		properties
 	    Data_Size => 600 Bytes;
-	end inertial_altitude;
+	end Inertial_Altitude;
 end dataType;

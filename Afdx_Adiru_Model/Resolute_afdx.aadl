@@ -5,7 +5,8 @@ annex resolute {**
     check_arinc664_compliance () <=
 		** "Check compliance of the model with ARINC664 annex" **
 		check_arinc664_network()
-		and check_arinc664_switch()
+
+		and check_arinc664_switch_exist()
 	
 	-- 
 	-- Virtual bus checks
@@ -14,8 +15,8 @@ annex resolute {**
 	check_arinc664_network () <=
 		** "Check existence of main network and presence of virtual links" **
 		exists (vb : virtual_bus) . true  =>
-		    has_property(vb, ID_Properties::busType) and
-		    property(vb, ID_Properties::busType) = "Network" and
+		    has_property(vb, ID_Properties::Bus_Type) and
+		    property(vb, ID_Properties::Bus_Type) = "Network" and
 		    check_arinc664_virtual_links(vb)
 	         
 	check_arinc664_virtual_links (vb : virtual_bus) <=
@@ -29,24 +30,26 @@ annex resolute {**
 		 has_property (vb, AFDX_Properties::BAG) and 
 		 has_property (vb, AFDX_Properties::SkewMax) and
 		 has_property (vb, AFDX_Properties::Lmax) and
-		 has_property (vb, ID_Properties::busType) and (property(vb, ID_Properties::busType) = "Virtual_link")
+		 has_property (vb, ID_Properties::Bus_Type) and (property(vb, ID_Properties::Bus_Type) = "Virtual_link")
 		 
 	-- 
 	-- Switch checks
     --	 
+  
+    check_arinc664_switch_exist () <=
+		** "Check existence of switchs in the model" **
+		exists (sw : device) . true  => check_arinc664_switch()
     
 	check_arinc664_switch() <=
-		 ** "Check compliance of switch " **
-		 forall (sw : device) . true => check_arinc664_switch_check (sw)
+		 ** "Check compliance of switchs" **
+		forall (sw : device) . true and (has_property (sw,ID_Properties::Device_Type) and
+          (property(sw, ID_Properties::Device_Type) = "Switch")) => check_arinc664_switch_check (sw)
 		 
     check_arinc664_switch_check (sw:device)  <=
-         ** "Check compliance of device switch " sw **
+         ** "Check compliance of device switch " sw " for VL_Route_Table property" **
           
-          (has_property (sw,ID_Properties::deviceType) and
-          (property(sw, ID_Properties::deviceType) = "Switch") and
-          has_property (sw, AFDX_Properties::VL_Route_Table) )
-          or (property(sw, ID_Properties::deviceType) = "EndSystem")
-          or (property(sw, ID_Properties::deviceType) = "Sensor")
+          has_property (sw, AFDX_Properties::VL_Route_Table)
+          
 		 	
     				
 **};
