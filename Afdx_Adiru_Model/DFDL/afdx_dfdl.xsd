@@ -55,9 +55,12 @@ Developed by: Rim BEN DHAOU
 
       <dfdl:format ref="afdx:defaults" byteOrder="bigEndian" />
       <!-- variable definitions -->
-      <dfdl:defineVariable name="CodageARINC429" type="xs:string"/>
+      <!--dfdl:defineVariable name="CodageARINC429" type="xs:string"/>
       <dfdl:defineVariable name="NbOfBits" type="xs:string"/>
-      <dfdl:defineVariable name="Resolution" type="xs:string"/>
+      <dfdl:defineVariable name="Resolution" type="xs:string"/-->
+
+      <dfdl:defineVariable name="data-range" type="xs:double">0.03125</dfdl:defineVariable>
+      
       
     </xs:appinfo>
   </xs:annotation>
@@ -66,9 +69,13 @@ Developed by: Rim BEN DHAOU
   <xs:simpleType name="bit" dfdl:lengthKind="explicit" dfdl:byteOrder="bigEndian" dfdl:lengthUnits="bits">
     <xs:restriction base="xs:unsignedInt" />
   </xs:simpleType>
-  <!-- Simple Types little endian -->
-  <xs:simpleType name="littlebit" dfdl:lengthKind="explicit" dfdl:byteOrder="littleEndian" dfdl:lengthUnits="bits">
-    <xs:restriction base="xs:unsignedInt" />
+
+  <xs:simpleType name="Double" dfdl:lengthKind="explicit" dfdl:byteOrder="bigEndian" dfdl:lengthUnits="bits">
+    <xs:restriction base="xs:double" />
+  </xs:simpleType>
+
+  <xs:simpleType name="uLong" dfdl:lengthKind="explicit" dfdl:byteOrder="bigEndian" dfdl:lengthUnits="bits">
+    <xs:restriction base="xs:unsignedLong" />
   </xs:simpleType>
 
   <xs:simpleType name="hexByte" dfdl:lengthKind="explicit" dfdl:byteOrder="bigEndian" dfdl:lengthUnits="bytes">
@@ -111,15 +118,6 @@ Developed by: Rim BEN DHAOU
       <xs:element name="IPDestByte4" type="xs:unsignedByte" dfdl:outputValueCalc="{
          xs:unsignedByte(fn:substring-after(fn:substring-after(fn:substring-after(../IPDest, '.'), '.'), '.'))
          }"/>
-    </xs:sequence>
-  </xs:group>
-
-  <!-- TODO MAY BE NEED TO DELETE Label Group -->
-  <xs:group name="LabelGroup" >
-    <xs:sequence>
-        <xs:element name="Label1" type="afdx:bit" dfdl:length="2" />
-        <xs:element name="Label2" type="afdx:bit" dfdl:length="3" />
-        <xs:element name="Label3" type="afdx:bit" dfdl:length="3" />
     </xs:sequence>
   </xs:group>
   
@@ -273,7 +271,7 @@ Developed by: Rim BEN DHAOU
     </xs:complexType>
   </xs:element>
 
-  <!-- UDP Payload or afdx payload size between 18â€¦1472-->
+  <!-- UDP Payload or afdx payload size between 18…1472-->
   <xs:element name='UDPPayload'>
     <xs:complexType>
       <xs:sequence>
@@ -286,96 +284,52 @@ Developed by: Rim BEN DHAOU
   <xs:element name='DataSet'>
     <xs:complexType> 
       <xs:sequence>
-        <!-- codage BNR or BCD-->
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <!-- set codage variable to BNR or BCD-->
-            <dfdl:setVariable ref="afdx:CodageARINC429"  value="BNR"/>
-            <!-- set Nb Bits variable -->
-            <dfdl:setVariable ref="afdx:NbOfBits"  value="18"/>
-            <!-- set resolution variable :: use range not resolution -->
-            <dfdl:setVariable ref="afdx:Resolution"  value="0.0078125"/>
-          </xs:appinfo>
-        </xs:annotation>
-        <xs:element name="parameters">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="NbOfBits" type="xs:string" dfdl:inputValueCalc="{ $afdx:NbOfBits }"/>
-              <xs:element name="Resolution" type="xs:string" dfdl:inputValueCalc="{ $afdx:Resolution }"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
         <xs:element ref="afdx:ARINC429Data"/>
       </xs:sequence>  
     </xs:complexType>
   </xs:element>
 
-  <!-- ARINC429 data-->
-    <xs:element name='ARINC429Data'>
+  <!-- ARINC429 data -->
+  <xs:element name="ARINC429Data">
     <xs:complexType>
       <xs:sequence>
-        
-        <xs:choice>
-          <xs:element ref="afdx:ARINC429DataBCD" />
-          <xs:element ref="afdx:ARINC429DataBNR" />
-        </xs:choice>
-        <!--xs:sequence dfdl:hiddenGroupRef="afdx:LabelGroup"/-->
-        <xs:sequence >
-          <xs:element name="Label_1" type="afdx:bit" dfdl:length="1"/>
-          <xs:element name="Label_2" type="afdx:bit" dfdl:length="1"/>
-          <xs:element name="Label_3" type="afdx:bit" dfdl:length="1"/>
-          <xs:element name="Label_4" type="afdx:bit" dfdl:length="1"/>
-          <xs:element name="Label_5" type="afdx:bit" dfdl:length="1"/>
-          <xs:element name="Label_6" type="afdx:bit" dfdl:length="1"/>
-          <xs:element name="Label_7" type="afdx:bit" dfdl:length="1"/>
-          <xs:element name="Label_8" type="afdx:bit" dfdl:length="1"/>
-        </xs:sequence>
-        <xs:element name="Label1" type="xs:unsignedInt" dfdl:inputValueCalc="{ ../Label_1 *1 + ../Label_2 *2 + ../Label_3 *4 }"/>
-        <xs:element name="Label2" type="xs:unsignedInt" dfdl:inputValueCalc="{ ../Label_4 *1 + ../Label_5 *2 + ../Label_6 *4 }"/>
-        <xs:element name="Label3" type="xs:unsignedInt" dfdl:inputValueCalc="{ ../Label_7 *1 + ../Label_8 *2 }"/>
-      </xs:sequence>
-    </xs:complexType> 
-  </xs:element>
-
-  <!-- BNR ARINC429 data-->
-  <xs:element name='ARINC429DataBNR'>
-    <xs:complexType>
-      <xs:sequence>
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <!--dfdl:setVariable ref="afdx:CodageARINC429"  value="BNR"/-->
-            <dfdl:discriminator message="Not BNR data" test="{ $afdx:CodageARINC429 eq 'BNR'  }" />
-            
-          </xs:appinfo>
-        </xs:annotation>
-        <xs:element name="Bit32" type="afdx:bit" dfdl:length="1" />
-        <xs:element name="SSM" type="afdx:bit" dfdl:length="3"/>
-        <xs:element name="DataField" type="afdx:bit" dfdl:length="18" />
-        <xs:element name="SDI" type="afdx:bit" dfdl:length="2"/>
+        <xs:sequence dfdl:hiddenGroupRef="afdx:hiddenLabel"/>
+        <xs:element name="Label" type="afdx:bit" dfdl:length="8"
+                    dfdl:inputValueCalc="{ (../bit1 +  ../bit2 * 2 + ../bit3 * 4)+ 
+                    ((../bit4 +  ../bit5 * 2 + ../bit6 * 4 ) * 10 )+ ((../bit7 +  ../bit8 * 2 )* 100)  
+                    }"/>
+        <xs:element name="sdi" type="afdx:bit" dfdl:length="2" />
+        <xs:element name="padding" type="afdx:bit" dfdl:length="2"/>
+        <xs:sequence dfdl:hiddenGroupRef="afdx:hiddenRawData"/>
+        <xs:element name="Data_Value" type="afdx:Double" dfdl:length="16"
+                    dfdl:inputValueCalc="{ ../rawData * $afdx:data-range   
+                    }"/>
+        <xs:element name="sign" type="afdx:bit" dfdl:length="1"/>
+        <xs:element name="statusMatrix" type="afdx:bit" dfdl:length="2"/>
+        <xs:element name="parity" type="afdx:bit" dfdl:length="1"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
 
-  <!-- BCD ARINC429 data-->
-  <xs:element name='ARINC429DataBCD'>
-    <xs:complexType>
-      <xs:sequence>
-        <xs:annotation>
-          <xs:appinfo source="http://www.ogf.org/dfdl/">
-            <!--dfdl:setVariable ref="afdx:CodageARINC429"  value="BNR"/-->
-            <!--dfdl:discriminator message="Not BCD data" test="{ xs:unsignedInt(../../codage) eq 1 }" /-->
-            <dfdl:discriminator message="Not BCD data" test="{ $afdx:CodageARINC429 eq 'BCD' }" />
-          </xs:appinfo>
-        </xs:annotation>
-        <xs:element name="Bit32" type="afdx:bit" dfdl:length="1" />
-        <xs:element name="SSM" type="afdx:bit" dfdl:length="2"/>
-        <xs:element name="DataField" type="afdx:bit" dfdl:length="19" />
-        <xs:element name="SDI" type="afdx:bit" dfdl:length="2"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:group name="hiddenRawData">
+    <xs:sequence>
+      <xs:element name="rawData" type="afdx:uLong" dfdl:length="16"
+        dfdl:outputValueCalc="{ ../Data_Value div $afdx:data-range }" />
+    </xs:sequence>
+  </xs:group>
 
+  <xs:group name="hiddenLabel">
+    <xs:sequence>
+      <xs:element name="bit1" type="afdx:bit" dfdl:length="1"
+                  dfdl:outputValueCalc="{ (../Label mod 10 ) div 1 mod 2}" />
+      <xs:element name="bit2" type="afdx:bit" dfdl:length="1" dfdl:outputValueCalc="{ (../Label mod 10) div 2 mod 2  }"/>
+      <xs:element name="bit3" type="afdx:bit" dfdl:length="1" dfdl:outputValueCalc="{ (../Label mod 10) div 4  mod 2}"/>
+      <xs:element name="bit4" type="afdx:bit" dfdl:length="1" dfdl:outputValueCalc="{ ((../Label div 10) mod 10) div 1 mod 2  }"/>
+      <xs:element name="bit5" type="afdx:bit" dfdl:length="1" dfdl:outputValueCalc="{ ((../Label div 10) mod 10) div 2 mod 2 }"/>
+      <xs:element name="bit6" type="afdx:bit" dfdl:length="1" dfdl:outputValueCalc="{ ((../Label div 10) mod 10) div 4 mod 2 }"/>
+      <xs:element name="bit7" type="afdx:bit" dfdl:length="1" dfdl:outputValueCalc="{ (../Label div 100) div 1 mod 2  }"/>
+      <xs:element name="bit8" type="afdx:bit" dfdl:length="1" dfdl:outputValueCalc="{ (../Label div 100) div 2 mod 2  }"/>
+    </xs:sequence>
+  </xs:group>
   
-
 </xs:schema>
-

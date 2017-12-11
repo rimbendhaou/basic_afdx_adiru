@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="frame_display.xsl"?>
-
 <afdx:AFDXFrame xmlns:afdx="afdx:1.1">
   <afdx:MacHeader>
     <MacDestAddr>
@@ -47,15 +46,13 @@
       <afdx:UDPPayload>
         <afdx:DataSet>
           <afdx:ARINC429Data>
-            <Label1>2</Label1>
-            <Label2>4</Label2>
-            <Label3>2</Label3>
-            <afdx:ARINC429DataBCD>
-              <Bit32>0</Bit32>
-              <SSM>3</SSM>
-              <DataField>67200</DataField>
-              <SDI>0</SDI>
-            </afdx:ARINC429DataBCD>
+            <Label>242</Label>
+            <sdi>0</sdi>
+            <padding>0</padding>
+            <Data_Value>1050.0</Data_Value>
+            <sign>0</sign>
+            <statusMatrix>3</statusMatrix>
+            <parity>0</parity>
           </afdx:ARINC429Data>
         </afdx:DataSet>
       </afdx:UDPPayload>
